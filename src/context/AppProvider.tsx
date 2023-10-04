@@ -1,14 +1,9 @@
-import { FC } from 'react';
-import { AppContext } from './AppContext';
-import { ChildrenProp } from './types/index';
+import { FC } from "react";
+import { AppContext } from "./AppContext";
+import { ChildrenProp } from "../components/types/index";
 
 export const AppProvider: FC<ChildrenProp> = ({ children }: ChildrenProp) => {
+  const value = {};
 
-	const value = {};
-
-	return (
-		<AppContext.Provider value={value}>
-			{children}
-		</AppContext.Provider>
-	);
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

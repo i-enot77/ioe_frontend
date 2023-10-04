@@ -1,20 +1,24 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import { AppProvider } from './context/AppProvider';
-import { Home } from './pages/Home';
-
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import "./App.css"
+import Home from "./pages/Home"
+import { TestPage } from "./pages/TestPage"
+import SitesDetails from "./pages/SitesDetails"
+import Navbar from "./components/navbar/Navbar"
+import JobsPage from "./pages/JobsPage"
 
 function App() {
-
   return (
-    <AppProvider>
+    <div className="w-full h-screen overflow-hidden  bg-[#F3F2EF]">
       <BrowserRouter>
-				<Routes>
-          <Route path={'/'} element={<Home  />}/>
+        <Navbar />
+        <Routes>
+          <Route path={"/"} element={<Home />} />
+          <Route path={"/test"} element={<TestPage />} />
+          <Route path={"/details"} element={<SitesDetails />} />
+          <Route path={"/jobs"} element={<JobsPage />} />
         </Routes>
       </BrowserRouter>
-    </AppProvider>
+    </div>
   )
 }
 

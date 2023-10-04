@@ -1,15 +1,14 @@
-# IOE Frontend 
+# IOE Frontend
 
 This is a frontend user interface of IOE project
 
-
 ## Requirement
 
-- Node `v18.13.0` 
+- Node `v18.13.0`
 - NPM `9.4.0`
 
-
 ## Technologies
+
 - React Vite bootstrap application
 - Tailwind CSS Framework
 - React Vitest and React Testing library

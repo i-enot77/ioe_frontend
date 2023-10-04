@@ -1,6 +1,5 @@
-import { createContext } from 'react';
-import { IAppContext } from './types';
-
+import { createContext } from "react";
+import { IAppContext } from "../components/types";
 
 export const defaultState = {};
 

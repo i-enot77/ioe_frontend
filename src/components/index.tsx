@@ -1,6 +1,3 @@
-
 export const MainComponent = () => {
-    return (
-        <span>Template component</span>
-    );
+  return <span>Template component</span>;
 };

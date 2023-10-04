@@ -1,0 +1,654 @@
+{
+  "devices": [
+    {
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name211111",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A",
+      "id": 1
+    },
+    {
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name22",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name23",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
+    },
+    {
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name2444444",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name2525",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
+    },
+    {
+      "id": 6,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name26",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
+    },
+    {
+      "id": 7,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name27",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
+    },
+    {
+      "serialNumber": "number00",
+      "modem": "modem29202",
+      "name": "name009",
+      "type": "44Alpha",
+      "loginInfo": "{json: \"Json\"}",
+      "timezone": "",
+      "site": "",
+      "id": 8
+    },
+    {
+      "serialNumber": "",
+      "modem": "",
+      "name": "",
+      "type": "",
+      "loginInfo": "",
+      "timezone": "",
+      "site": "",
+      "id": 9
+    }
+  ],
+  "modems": [
+    {
+      "id": 1,
+      "name": "name1",
+      "imei": "imei1",
+      "ip": "ipnumber1",
+      "version": "version1",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha"
+    },
+    {
+      "name": "name2",
+      "imei": "imei2",
+      "ip": "ipnumber2",
+      "version": "version2",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "name3",
+      "imei": "imei3",
+      "ip": "ipnumber3",
+      "version": "version3",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha"
+    },
+    {
+      "id": 4,
+      "name": "name4",
+      "imei": "imei4",
+      "ip": "ipnumber4",
+      "version": "version4",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha"
+    },
+    {
+      "id": 5,
+      "name": "name5",
+      "imei": "imei5",
+      "ip": "ipnumber5",
+      "version": "version5",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha"
+    },
+    {
+      "id": 6,
+      "name": "name6",
+      "imei": "imei6",
+      "ip": "ipnumber6",
+      "version": "version6",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha"
+    },
+    {
+      "id": 7,
+      "name": "name7",
+      "imei": "imei7",
+      "ip": "ipnumber7",
+      "version": "version7",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha"
+    },
+    {
+      "id": 1,
+      "name": "name1"
+    },
+    {
+      "id": 2,
+      "name": "name2"
+    },
+    {
+      "id": 3,
+      "name": "name3"
+    },
+    {
+      "id": 4,
+      "name": "name4"
+    },
+    {
+      "id": 5,
+      "name": "name5"
+    },
+    {
+      "id": 6,
+      "name": "name6"
+    },
+    {
+      "id": 7,
+      "name": "name7"
+    }
+  ],
+  "sites": [
+    {
+      "id": 1,
+      "name": "name1"
+    },
+    {
+      "id": 2,
+      "name": "name2"
+    },
+    {
+      "id": 3,
+      "name": "name3"
+    },
+    {
+      "id": 4,
+      "name": "name4"
+    },
+    {
+      "id": 5,
+      "name": "name5"
+    },
+    {
+      "id": 6,
+      "name": "name6"
+    },
+    {
+      "id": 7,
+      "name": "name7"
+    }
+  ],
+  "jobs": [
+    {
+      "deviceName": "name1",
+      "period": "666",
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-09-22T13:33:03.969Z",
+      "read": "440",
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "running",
+      "type": "Cty",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "deviceName": "name2",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-16T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Bthrey"
+    },
+    {
+      "id": 3,
+      "deviceName": "name3",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-07-10T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "waiting",
+      "type": "Alpha"
+    },
+    {
+      "id": 4,
+      "deviceName": "name4",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-07-01T13:33:03.969Z",
+      "read": "660",
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "running",
+      "type": "Tetha"
+    },
+    {
+      "id": 5,
+      "deviceName": "name5",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-19T13:33:03.969Z",
+      "read": "600",
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Mega"
+    },
+    {
+      "id": 6,
+      "deviceName": "name6",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-06-06T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "waiting",
+      "type": "Cty"
+    },
+    {
+      "id": 7,
+      "deviceName": "name7",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-09-10T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "running",
+      "type": "Mega"
+    },
+    {
+      "id": 8,
+      "deviceName": "name8",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 9,
+      "deviceName": "name9",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 10,
+      "deviceName": "name10",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 11,
+      "deviceName": "name11",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 12,
+      "deviceName": "name12",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 13,
+      "deviceName": "name13",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 14,
+      "deviceName": "name14",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 15,
+      "deviceName": "name15",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 16,
+      "deviceName": "name16",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 17,
+      "deviceName": "name17",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 18,
+      "deviceName": "name18",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 19,
+      "deviceName": "name19",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 20,
+      "deviceName": "name20",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 21,
+      "deviceName": "name21",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 22,
+      "deviceName": "name22",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 23,
+      "deviceName": "name23",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 24,
+      "deviceName": "name24",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 25,
+      "deviceName": "name25",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 26,
+      "deviceName": "name26",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "id": 27,
+      "deviceName": "name27",
+      "period": 500,
+      "startDate": "2023-07-04T13:33:03.969Z",
+      "stopDate": "2023-08-30T13:33:03.969Z",
+      "read": 330,
+      "readParams": {
+        "params": "I am Json"
+      },
+      "status": "failing",
+      "type": "Alpha"
+    },
+    {
+      "deviceName": "name33",
+      "period": "666",
+      "startDate": "2023-09-29T17:50",
+      "stopDate": "2023-10-09T10:00",
+      "read": "476",
+      "readParams": "{\"Json\": \"Im Json\"}",
+      "status": "",
+      "type": "",
+      "id": 28
+    }
+  ],
+  "alarms": [
+    {
+      "deviceName": "name1",
+      "job": "Maintenance is fixed ",
+      "time": "2023-07-04T13:33:03.969Z",
+      "status": "available"
+    },
+    {
+      "deviceName": "name2",
+      "job": "Device is down ",
+      "time": "2023-08-04T17:33:03.969Z",
+      "status": "incident"
+    },
+    {
+      "deviceName": "name3",
+      "job": "Job is schedule ",
+      "time": "2023-08-17T10:00:03.969Z",
+      "status": "waiting"
+    },
+    {
+      "deviceName": "name4",
+      "job": "Device is down ",
+      "time": "2023-08-10T12:00:03.969Z",
+      "status": "incident"
+    },
+    {
+      "deviceName": "name5",
+      "job": "Maintenance is fixed ",
+      "time": "2023-08-14T16:46:03.969Z",
+      "status": "available"
+    },
+    {
+      "deviceName": "name6",
+      "job": "Job is schedule ",
+      "time": "2023-08-20T15:00:03.969Z",
+      "status": "waiting"
+    }
+  ]
+}
