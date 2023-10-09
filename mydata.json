@@ -85,14 +85,88 @@
       "site": "Site_A"
     },
     {
-      "serialNumber": "number00",
-      "modem": "modem29202",
-      "name": "name009",
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name211111",
       "type": "44Alpha",
-      "loginInfo": "{json: \"Json\"}",
-      "timezone": "",
-      "site": "",
-      "id": 8
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A",
+      "id": 1
+    },
+    {
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name22",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name23",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
+    },
+    {
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name2444444",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name2525",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
+    },
+    {
+      "id": 6,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name26",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
+    },
+    {
+      "id": 7,
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "name": "name27",
+      "type": "44Alpha",
+      "loginInfo": {
+        "json": "I am Json "
+      },
+      "timezone": "UTC 2 Warsaw time",
+      "site": "Site_A"
     },
     {
       "serialNumber": "",
@@ -189,34 +263,6 @@
       },
       "location": "Warszawa",
       "type": "44Alpha"
-    },
-    {
-      "id": 1,
-      "name": "name1"
-    },
-    {
-      "id": 2,
-      "name": "name2"
-    },
-    {
-      "id": 3,
-      "name": "name3"
-    },
-    {
-      "id": 4,
-      "name": "name4"
-    },
-    {
-      "id": 5,
-      "name": "name5"
-    },
-    {
-      "id": 6,
-      "name": "name6"
-    },
-    {
-      "id": 7,
-      "name": "name7"
     }
   ],
   "sites": [

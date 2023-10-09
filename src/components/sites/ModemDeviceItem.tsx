@@ -23,7 +23,7 @@ function ModemDeviceItem({ id, devName }: ModemDeviceProp) {
         devState.value ? "text-[#87C4E7]" : "text-[#808080]"
       }`}
       onClick={() => {
-        devState.handleState()
+        devState.toggleState()
         dispatch(setDevDataById(id))
         dispatch(devPanelToFalse())
       }}

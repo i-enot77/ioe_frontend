@@ -7,7 +7,7 @@ export interface InputProp {
   id?: string
   inputName?: string
   placeholder?: string
-  inputValue?: any
+  inputValue?: string | number
   onChangeInputHandler?: (e: React.ChangeEvent<HTMLInputElement>) => void
   inputClassName?: string
   labelClassName?: string
@@ -28,7 +28,7 @@ export interface TextareaProp {
   label?: string
   id?: string
   placeholderItem?: string
-  itemValue?: any
+  itemValue?: string
   onChangeHandler?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
   textareaClassName?: string
   labelClassName?: string

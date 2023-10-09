@@ -29,7 +29,7 @@ const ModemItem = ({ id, modName, children }: ModemItemProp & ChildrenProp) => {
     >
       <div
         onClick={() => {
-          state.handleState()
+          state.toggleState()
           dispatch(setModemItem(id))
           dispatch(panelToFalse())
           dispatch(devPanelToTrue())

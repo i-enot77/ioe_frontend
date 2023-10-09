@@ -11,6 +11,7 @@ import {
 } from "../../../app/reducers/devices"
 import { data } from "./data"
 import { initOption } from "../../../app/reducers/option"
+import { EditInputProp } from "../../types"
 
 const style = {
   inputClass: `border border-[#EEF3F8] rounded px-4 py-1 mt-1 placeholder:text-sm placeholder:text-[#808080]`,
@@ -29,11 +30,7 @@ export default function DeviceModal({ isOpen, isEdit, wrapperStyle }: DevProp) {
   const dispatch = useAppDispatch()
   const deviceData = useAppSelector((state) => state.device.deviceData)
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: EditInputProp) => {
     const { name, value } = e.target
     dispatch(updateDevField({ [name]: value }))
   }
@@ -75,7 +72,7 @@ export default function DeviceModal({ isOpen, isEdit, wrapperStyle }: DevProp) {
           placeholderItem="Enter device login info as JSON type"
           label="Login Info"
           id="loginInfo"
-          itemValue={deviceData.loginInfo.json}
+          itemValue={deviceData.loginInfo}
           onChangeHandler={handleChange}
           textareaClassName={style.inputClass}
           labelClassName={style.labelClass}

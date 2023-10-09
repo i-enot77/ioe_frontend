@@ -4,12 +4,12 @@ import axios from 'axios'
 
 
 export type DevArrProps = {
-    id?: number | undefined
+    id?: number
     serialNumber: string
     modem: string
     devName: string
     type: string
-    loginInfo?: any
+    loginInfo?: string
     timezone?: string
     site?: string
     [key: string]: any

@@ -31,11 +31,7 @@ export default function EditDeviceModal({ isEdit }: EditProp) {
         <div className="w-[55%] mr-2">
           <div className={`${style.item} border-b-0 rounded-lg mb-3`}>
             {headerContent.map((item, index) => (
-              <DeviceHeader
-                key={index}
-                title={item.title}
-                headerClassName={"modal_title"}
-              />
+              <DeviceHeader key={index} title={item.title} />
             ))}
           </div>
           {devicesArr.map((item, index) => (

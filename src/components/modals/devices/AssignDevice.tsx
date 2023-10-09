@@ -10,17 +10,16 @@ import { useAppDispatch, useAppSelector } from "../../../app/hooks"
 import { setDevices } from "../../../app/reducers/devices"
 
 const style = {
-  item: `w-full p-3 flex justify-between border-b border-[rgba(128, 128, 128, 0.14)]`,
+  item: `w-full p-3 grid grid-rows-1 grid-cols-6 justify-items-center border-b border-[rgba(128, 128, 128, 0.14)]`,
   inputClass: ` w-full bg-white placeholder:text-text-color placeholder:text-[10px] p-1 ml-1 outline-none `,
 }
-
 const headerContent = [
-  { title: "Serial number", headerClassName: "w-[16%]" },
-  { title: "Modem", headerClassName: "w-[10%]" },
-  { title: "Name", headerClassName: "w-[10%]" },
-  { title: "Type", headerClassName: "w-[10%]" },
-  { title: "Timezone", headerClassName: "w-[15%]" },
-  { title: "Site", headerClassName: "w-[6%]" },
+  "Serial number",
+  "Modem",
+  "Name",
+  "Type",
+  "Timezone",
+  "Site",
 ]
 
 export default function AssignDevice() {
@@ -34,15 +33,14 @@ export default function AssignDevice() {
   const handleSearch = (search: string) => {
     if (!search) {
       return devicesArr
-    } else {
-      const filteredItems = devicesArr.filter(
-        (item) =>
-          item.serialNumber?.toLowerCase().includes(search.toLowerCase()) ||
-          item.devName?.toLowerCase().includes(search.toLowerCase()) ||
-          item.type?.toString().includes(search)
-      )
-      dispatch(setDevices(filteredItems))
     }
+    const filteredItems = devicesArr.filter(
+      (item) =>
+        item.serialNumber?.toLowerCase().includes(search.toLowerCase()) ||
+        item.name?.toLowerCase().includes(search.toLowerCase()) ||
+        item.type?.toString().includes(search)
+    )
+    dispatch(setDevices(filteredItems))
   }
 
   const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +49,7 @@ export default function AssignDevice() {
   }
 
   return (
-    <div className="w-[970px]">
+    <div className="w-[970px] h-full">
       <p className="title mb-5">Available devices</p>
 
       <div className="flex justify-center items-center bg-white w-[300px] rounded p-2 pl-5 mb-4">
@@ -73,29 +71,25 @@ export default function AssignDevice() {
         <div
           className={`${
             openKey.openValue ? "w-[70%]" : "w-full"
-          } flex flex-col mr-3`}
+          } flex flex-col mr-3 h-full  bg-white p-3 rounded-lg`}
         >
           <div className="w-full">
             <div className={`${style.item} border-b-0 rounded-lg mb-3`}>
               {headerContent.map((item, index) => (
-                <DeviceHeader
-                  key={index}
-                  title={item.title}
-                  headerClassName={"modal_title"}
-                />
+                <DeviceHeader key={index} title={item} />
               ))}
             </div>
 
-            <div className="w-full">
+            <div className="w-full h-80 overflow-y-auto no-scrollbar">
               {!devicesArr.length ? (
                 <p>No results</p>
               ) : (
                 devicesArr.map((item, index) => (
                   <div
                     key={index}
-                    onClick={() => openKey.checkKey(item.devName)}
+                    onClick={() => openKey.checkKey(item.name)}
                     className={`${
-                      openKey.openValue !== item.devName
+                      openKey.openValue !== item.name
                         ? "bg-white"
                         : "bg-[#D9D9D9]"
                     } ${style.item} first:rounded-t-lg last:rounded-b-lg`}
@@ -103,7 +97,7 @@ export default function AssignDevice() {
                     <DeviceItem
                       serialNumber={item.serialNumber}
                       modem={item.modem}
-                      devName={item.devName}
+                      devName={item.name}
                       type={item.type}
                       timezone={item.timezone}
                       site={item.site}

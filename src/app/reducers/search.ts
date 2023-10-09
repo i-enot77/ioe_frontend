@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export type SearchProp = {
     filterBy: string
-    responseArr: any
+    responseArr: object[]
 }
 
 const initialState: SearchProp = {
@@ -17,7 +17,7 @@ export const searchRequest = createAsyncThunk(
     'search/searchRequest',
     async ({filter, search}: {filter: string; search: string}) => {
         const response =  axios.get(`http://localhost:3500/${filter}?name=${search}`)
-        return response
+        return (await response).data
     }
 )
 
@@ -34,7 +34,6 @@ export const searchSlice = createSlice({
         builder
         .addCase(searchRequest.fulfilled, (state, action) => {
             state.responseArr = action.payload
-            console.log(state.responseArr)
         })
     }
 })

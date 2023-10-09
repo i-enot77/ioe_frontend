@@ -7,6 +7,7 @@ import { jobSlice } from './reducers/jobs'
 import { sideSlice } from './reducers/sidePanel'
 import { jobsPagination } from './api'
 import { searchSlice } from './reducers/search'
+import { alarmSlice } from './reducers/alarms'
 
 const rootReducer = combineReducers({
     sites: sitesSlice.reducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
     jobs: jobSlice.reducer,
     sidePanel: sideSlice.reducer,
     search: searchSlice.reducer,
+    alarms: alarmSlice.reducer,
 
     [jobsPagination.reducerPath]: jobsPagination.reducer,
 })

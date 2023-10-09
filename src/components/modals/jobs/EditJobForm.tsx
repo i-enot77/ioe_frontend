@@ -6,6 +6,7 @@ import { style } from "./PeriodicJob"
 import { periodicJobsData } from "./data"
 import { useAppDispatch, useAppSelector } from "../../../app/hooks"
 import { JobProp, updatePeriodicJobInput } from "../../../app/reducers/jobs"
+import { EditInputProp } from "../../types"
 
 type EditFormProp = {
   submitProp: (e: React.FormEvent) => Promise<void>
@@ -15,11 +16,7 @@ function EditJobForm({ submitProp }: EditFormProp) {
   const dispatch = useAppDispatch()
   const periodicJobData = useAppSelector((state) => state.jobs.periodicJobData)
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: EditInputProp) => {
     const { name, value } = e.target
     periodicJobData &&
       dispatch(updatePeriodicJobInput({ ...periodicJobData, [name]: value }))

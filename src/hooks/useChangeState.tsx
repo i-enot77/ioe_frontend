@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const useChangeState = (stateProp: boolean) => {
   const [value, setValue] = useState(stateProp)
-  const handleState = () => {
+  const toggleState = () => {
     setValue(!value)
   }
   const toFalse = () => {
@@ -10,7 +10,7 @@ const useChangeState = (stateProp: boolean) => {
   }
   return {
     value,
-    handleState,
+    toggleState,
     toFalse,
   }
 }

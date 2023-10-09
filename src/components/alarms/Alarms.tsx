@@ -1,8 +1,10 @@
-import useFetchData from "../../hooks/useFetchData"
+import { useLayoutEffect } from "react"
+import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import Title from "../jobs/Title"
 import { DetailProp } from "../types"
 import { AlarmItem } from "./AlarmItem"
 import ReactTimeAgo from "react-time-ago"
+import { fetchAlarms } from "../../app/reducers/alarms"
 
 const style = {
   main: `w-[30%] rounded-md px-6 pb-5 overflow-y-auto no-scrollbar bg-white  mr-3`,
@@ -10,7 +12,12 @@ const style = {
 }
 
 export default function Alarms({ detailPage, detailStyle }: DetailProp) {
-  const alarmsData = useFetchData("http://localhost:3500/alarms")
+  const dispatch = useAppDispatch()
+  const alarmsData = useAppSelector((state) => state.alarms.alarmsArr)
+
+  useLayoutEffect(() => {
+    dispatch(fetchAlarms())
+  }, [])
 
   const getTimeString = (time: string): Date => {
     const parsedTime = new Date(time)
@@ -21,7 +28,7 @@ export default function Alarms({ detailPage, detailStyle }: DetailProp) {
     <div className={`${style.main} ${detailStyle}`}>
       {!detailPage && <Title>Alarms</Title>}
       <div>
-        {alarmsData.dataArr.map((item, index) => (
+        {alarmsData.map((item, index) => (
           <div key={index} className={style.item}>
             <AlarmItem
               deviceName={item.deviceName}

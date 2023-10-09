@@ -9,6 +9,7 @@ import {
   addPeriodicJob,
 } from "../../../app/reducers/jobs"
 import { initOption } from "../../../app/reducers/option"
+import { EditInputProp } from "../../types"
 
 export const style = {
   inputClass: `border border-[#EEF3F8] rounded px-4 py-1 mt-1 placeholder:text-sm placeholder:text-[#808080] text-black`,
@@ -20,11 +21,7 @@ export default function PeriodicJob() {
   const dispatch = useAppDispatch()
   const periodicJobData = useAppSelector((state) => state.jobs.periodicJobData)
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: EditInputProp) => {
     const { name, value } = e.target
     dispatch(updatePeriodicJobInput({ [name]: value }))
   }

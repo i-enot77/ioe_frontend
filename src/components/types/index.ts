@@ -13,8 +13,8 @@ export type DisableButtonProp = {
 export type ButtonProp = {
   children: React.ReactNode
   buttonClass?: string
-  clickHandler?(): void
-};
+  clickHandler?: any
+}
 
 export type DetailProp = {
   title?: string
@@ -23,3 +23,5 @@ export type DetailProp = {
   detailPage?: boolean
   detailStyle?: string
 }
+
+export type EditInputProp = React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>

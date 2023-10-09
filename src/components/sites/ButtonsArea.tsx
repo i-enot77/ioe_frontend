@@ -65,11 +65,11 @@ export const ButtonsArea = () => {
     <>
       <div
         ref={btnsRef}
-        className="flex justify-between items-start w-[40%] px-10 py-3 rounded bg-white ml-3"
+        className="grid grid-rows-1 grid-cols-2 justify-items-center w-[40%] px-10 py-3 rounded bg-white ml-3"
         id="buttons-area"
       >
         <div>
-          <p className="text-black text-lg mb-0">Devices</p>
+          <p className="text-black text-lg pl-4">Devices</p>
           <div className="flex flex-col justify-center items-start">
             <DisableButton
               buttonClass={style.btn}
@@ -132,7 +132,7 @@ export const ButtonsArea = () => {
         </div>
 
         <div>
-          <p className="text-black text-lg mb-1">Jobs</p>
+          <p className="text-black text-lg pl-4">Jobs</p>
           <div className="flex flex-col justify-center items-start">
             <DisableButton
               buttonClass={style.btn}

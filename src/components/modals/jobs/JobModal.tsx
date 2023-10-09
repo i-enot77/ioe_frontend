@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from "../../../app/hooks"
 import { updatePeriodicJobInput } from "../../../app/reducers/jobs"
 import { initOption } from "../../../app/reducers/option"
 import { useAddJobItemMutation } from "../../../app/api"
+import { EditInputProp } from "../../types"
 
 export default function JobModal() {
   const dispatch = useAppDispatch()
@@ -15,11 +16,7 @@ export default function JobModal() {
 
   const [addJob] = useAddJobItemMutation()
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: EditInputProp) => {
     const { name, value } = e.target
     dispatch(updatePeriodicJobInput({ ...periodicJobData, [name]: value }))
   }

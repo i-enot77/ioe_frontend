@@ -1,8 +1,7 @@
 export type HeaderProps = {
-  headerClassName: string
   title: string
 }
 
-export default function DeviceHeader({ headerClassName, title }: HeaderProps) {
-  return <span className={`${headerClassName} modal_title`}>{title}</span>
+export default function DeviceHeader({ title }: HeaderProps) {
+  return <div className="modal_title">{title}</div>
 }
