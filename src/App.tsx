@@ -5,6 +5,7 @@ import { TestPage } from "./pages/TestPage"
 import SitesDetails from "./pages/SitesDetails"
 import Navbar from "./components/navbar/Navbar"
 import JobsPage from "./pages/JobsPage"
+import Devices from "./pages/Devices"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={"/test"} element={<TestPage />} />
           <Route path={"/details"} element={<SitesDetails />} />
           <Route path={"/jobs"} element={<JobsPage />} />
+          <Route path={"/devices"} element={<Devices />} />
         </Routes>
       </BrowserRouter>
     </div>

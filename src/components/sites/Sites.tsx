@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 import {
   deleteSite,
   fetchSites,
-  setSiteItem,
+  setSiteItemId,
   setClickedItem,
   setClicked,
 } from "../../app/reducers/sites"
@@ -55,13 +55,13 @@ const Sites = () => {
           key={index}
           onClick={(e: React.MouseEvent) => {
             handleClicks(e, item.id ?? 0)
-            dispatch(setSiteItem(item))
+            dispatch(setSiteItemId(item.id))
           }}
           className={`${
             clickedItem !== item.id ? "bg-white" : "bg-[#87C4E7]"
           } ${style.siteItem}`}
         >
-          <SiteItem siteName={item.siteName} isActive={true}>
+          <SiteItem siteName={item.name} isActive={true}>
             <Button
               buttonClass="ml-3"
               clickHandler={(e: React.MouseEvent<HTMLDivElement>) => {

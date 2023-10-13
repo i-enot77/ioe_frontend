@@ -30,7 +30,7 @@ function NavBottom() {
           ))}
           <span ref={devicesRef}>
             <li className="text-[#808080] text-[12px] align-middle ml-11 py-2.5 px-4 hover:bg-light-gray hover:rounded hover:text-black duration-200">
-              <Link to={"/test"}>
+              <Link to={"/devices"}>
                 <span className=" pr-1.5">Devices</span>
               </Link>
               <FontAwesomeIcon

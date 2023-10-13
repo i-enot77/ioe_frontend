@@ -4,29 +4,25 @@ import axios from 'axios'
 
 
 export type SiteItemProp = {
-    id: number | null
-    siteName: string
-    
+    id: number
+    name: string
   }
 
 export interface initStateProps {
     sites: SiteItemProp []
-    siteItem: SiteItemProp
+    siteItemId: number | null
     clickedItem: SiteItemProp["id"] | null
     clicked: boolean
 }
 
 const initialState: initStateProps = {
     sites: [],
-    siteItem: {
-        id: null,
-        siteName: "",
-    },
+    siteItemId: null,
 // ----> po kliknięciu w Site, przyciski dla ButtonsArea się włączą
 // sprawdzam czy klikam raz czy dwa
     clickedItem: null,
 // ----> po kliknięciu - zalezność czy się odpalą przyciski
-    clicked: false
+    clicked: false,
 }
 
 export const fetchSites = createAsyncThunk(
@@ -51,8 +47,8 @@ export const sitesSlice = createSlice({
     setSites(state, action: PayloadAction<SiteItemProp[]>) {
         state.sites = action.payload
     },
-    setSiteItem(state, action: PayloadAction<SiteItemProp>) {
-        state.siteItem = action.payload
+    setSiteItemId(state, action: PayloadAction<number | null>) {
+        state.siteItemId = action.payload
     },
     setClickedItem(state, action: PayloadAction<SiteItemProp["id"] | null>) {
         state.clickedItem = action.payload
@@ -68,9 +64,9 @@ export const sitesSlice = createSlice({
     })
     .addCase(deleteSite.fulfilled, (state, action) => {
         state.sites = state.sites.filter((site) => site.id !== action.payload)
-      });
+    })
    }
 })
 
-export const { setSites, setSiteItem, setClickedItem, setClicked } = sitesSlice.actions
+export const { setSites, setSiteItemId, setClickedItem, setClicked } = sitesSlice.actions
 export default sitesSlice.reducer

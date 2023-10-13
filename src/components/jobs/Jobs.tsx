@@ -3,13 +3,12 @@ import { useLayoutEffect } from "react"
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { fetchJobs } from "../../app/reducers/jobs"
 import Title from "./Title"
-import { DetailProp } from "../types"
 
-export interface JobsProp {
+type JobsProp = {
   detailPage: boolean
 }
 
-export const Jobs = ({ detailPage }: DetailProp) => {
+export const Jobs = ({ detailPage }: JobsProp) => {
   const dispatch = useAppDispatch()
   const jobsArr = useAppSelector((state) => state.jobs.jobsArr)
   useLayoutEffect(() => {

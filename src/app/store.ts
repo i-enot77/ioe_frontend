@@ -5,7 +5,7 @@ import { optionSlice } from './reducers/option'
 import { modemSlice } from './reducers/modems'
 import { jobSlice } from './reducers/jobs'
 import { sideSlice } from './reducers/sidePanel'
-import { jobsPagination } from './api'
+import { ioeApi } from './api'
 import { searchSlice } from './reducers/search'
 import { alarmSlice } from './reducers/alarms'
 
@@ -19,13 +19,13 @@ const rootReducer = combineReducers({
     search: searchSlice.reducer,
     alarms: alarmSlice.reducer,
 
-    [jobsPagination.reducerPath]: jobsPagination.reducer,
+    [ioeApi.reducerPath]: ioeApi.reducer,
 })
 
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-  getDefaultMiddleware().concat(jobsPagination.middleware),
+  getDefaultMiddleware().concat(ioeApi.middleware),
 })
 
 export type RootState = ReturnType<typeof store.getState>

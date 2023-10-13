@@ -1,4 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { ModemsArrProps } from './reducers/modems'
+import { DevArrProps } from './reducers/devices'
+import { SiteItemProp } from './reducers/sites'
 
 type JobProp = {
     id?: number
@@ -12,12 +15,12 @@ type JobProp = {
     type?: string
   }
 
-  type JobsResponse = JobProp[]
+  type JobsResponse = JobProp[];
 
-  export const jobsPagination = createApi({
-    reducerPath: 'jobsPagination',
+  export const ioeApi = createApi({
+    reducerPath: 'ioeApi',
     baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3500/' }),
-    tagTypes: ['Jobs'],
+    tagTypes: ['Jobs', 'Modems', 'Devices', 'Sites'],
     endpoints: (build) => ({
         getPaginatedJobs: build.query<JobsResponse, { page?: number; limit?: number }>({
             query: ({ page = 1, limit = 10 }) => `jobs?_page=${page}&_limit=${limit}`,
@@ -33,13 +36,14 @@ type JobProp = {
         getJobsArr: build.query<JobsResponse, void>({
           query: () => 'jobs',
           providesTags: (result) => 
-         result ? 
-         [
-            ...result.map(({ id }) => ({ type: 'Jobs', id } as const)),
-            {type: 'Jobs'}
-          ]
-        : [{ type: 'Jobs' }]
-        }),
+          result
+          ? [
+              ...result.map(({id}) => ({type: 'Jobs' as const, id
+              })),
+              { type: 'Jobs', id: 'LIST' },
+            ]
+          : [{ type: 'Jobs', id: 'LIST' }],
+    }),
         addJobItem: build.mutation<JobProp, JobProp>({
           query: (data) => ({
             url: 'jobs',
@@ -62,9 +66,34 @@ type JobProp = {
             method: 'DELETE'
           }),
           invalidatesTags: (result, error, id) => [{type: 'Jobs', id}]
-        })
-
+        }),
+        //modems,devices fetch
+        getModems: build.query<ModemsArrProps[], void>({
+          query: () => 'modems',
+          providesTags: (result) => 
+          result
+          ? [
+              ...result.map(({id}) => ({type: 'Modems' as const, id
+              })),
+              { type: 'Modems', id: 'LIST' },
+            ]
+          : [{ type: 'Modems', id: 'LIST' }],
+        }),
+        getDevices: build.query<DevArrProps[], void>({
+          query: () => 'devices',
+          providesTags: (result) => 
+          result
+          ? [
+              ...result.map(({id}) => ({type: 'Devices' as const, id
+              })),
+              { type: 'Devices', id: 'LIST' },
+            ]
+          : [{ type: 'Devices', id: 'LIST' }],
+        }),
+        getSites: build.query<SiteItemProp[], void>({
+          query: () => 'sites',
+        }),
     })
   })
  
-  export const { useGetPaginatedJobsQuery, useGetJobItemQuery, useGetJobsArrQuery, useAddJobItemMutation, useUpdateJobItemMutation, useDeleteJobItemMutation  } = jobsPagination
+  export const { useGetPaginatedJobsQuery, useGetJobItemQuery, useGetJobsArrQuery, useAddJobItemMutation, useUpdateJobItemMutation, useDeleteJobItemMutation, useGetModemsQuery, useGetDevicesQuery, useGetSitesQuery  } = ioeApi

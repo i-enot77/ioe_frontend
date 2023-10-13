@@ -27,7 +27,6 @@ export const searchSlice = createSlice({
     reducers: {
         setFilterBy(state, action: PayloadAction<string>) {
             state.filterBy = action.payload.toLocaleLowerCase()
-            console.log(state.filterBy)
         }
     },
     extraReducers: (builder) => {

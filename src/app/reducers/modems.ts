@@ -3,7 +3,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import axios from 'axios'
 
 export type ModemsArrProps = {
-    id: number | undefined
+    id?: number
     name: string
     imei: string
     ip: string
