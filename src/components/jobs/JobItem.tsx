@@ -1,29 +1,35 @@
-import { JobProp } from "../../app/reducers/jobs"
-import { DetailProp } from "../types"
-import ReactTimeAgo from "react-time-ago"
-import JobSatus from "./JobStatus"
+import { DetailProp } from "../types";
+import ReactTimeAgo from "react-time-ago";
+import JobSatus from "./JobStatus";
 
 const style = {
   text: `text-xs text-[rgba(7, 7, 7, 0.8)] mr-3`,
   status: `flex justify-between items-center flex-wrap`,
   wrapper: `text-xs  min-w-[21%] bg-white border border-[#E4E6EB] rounded-md p-4`,
-}
+};
+
+type JobItemProp = {
+  id?: number;
+  deviceName?: string;
+  read?: number;
+  status?: "running" | "waiting" | "failing";
+  stopDate: string;
+};
 
 export const JobItem = ({
   id,
   deviceName,
   read,
   status,
-  startDate,
   stopDate,
   devNameClass,
   statusClass,
   detailPage,
-}: JobProp & DetailProp) => {
+}: JobItemProp & DetailProp) => {
   const getTimeString = (time: string): Date => {
-    const parsedTime = new Date(time)
-    return parsedTime
-  }
+    const parsedTime = new Date(time);
+    return parsedTime;
+  };
 
   return !detailPage ? (
     <div className={style.wrapper}>
@@ -51,7 +57,7 @@ export const JobItem = ({
       <div className="flex justify-between pb-2">
         <p className="text-base font-bold">Jobs {id}</p>
         <div className={`${style.status}`}>
-          <JobSatus jobStatus={status} statusClass="" />
+          <JobSatus jobStatus={status} />
         </div>
       </div>
 
@@ -64,5 +70,5 @@ export const JobItem = ({
         />
       </div>
     </div>
-  )
-}
+  );
+};

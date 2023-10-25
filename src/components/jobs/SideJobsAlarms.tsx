@@ -1,20 +1,20 @@
-import Alarms from "../alarms/Alarms"
-import { Jobs } from "./Jobs"
-import { useState } from "react"
-import Title from "./Title"
+import Alarms from "../alarms/Alarms";
+import { Jobs } from "./Jobs";
+import { useState } from "react";
+import Title from "./Title";
 
 function SideJobsAlarms() {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(true);
   const style = {
     detailStyle: `w-full`,
-  }
+  };
 
   return (
-    <div className="h-full">
-      <div className="flex justify-between">
+    <div className="h-[75%] bg-white rounded-md">
+      <div className="flex justify-between  px-6 bg-white">
         <Title
           handleClick={() => {
-            setIsOpen(true)
+            setIsOpen(true);
           }}
           titleStyle={`${
             isOpen ? "text-black" : "text-[#808080]"
@@ -24,7 +24,7 @@ function SideJobsAlarms() {
         </Title>
         <Title
           handleClick={() => {
-            setIsOpen(false)
+            setIsOpen(false);
           }}
           titleStyle={`${
             !isOpen ? "text-black" : "text-[#808080]"
@@ -33,7 +33,7 @@ function SideJobsAlarms() {
           Alarms
         </Title>
       </div>
-      <div className="h-[85%]">
+      <div className="h-full overflow-y-auto no-scrollbar">
         {isOpen ? (
           <Jobs detailPage={true} />
         ) : (
@@ -41,7 +41,7 @@ function SideJobsAlarms() {
         )}
       </div>
     </div>
-  )
+  );
 }
 
-export default SideJobsAlarms
+export default SideJobsAlarms;

@@ -1,5 +1,5 @@
-import { JobProp } from "../../app/reducers/jobs"
-import JobStatus from "./JobStatus"
+import { JobProp } from "../../app/reducers/jobs";
+import JobStatus from "./JobStatus";
 
 function JobDetailItem({
   read,
@@ -16,13 +16,13 @@ function JobDetailItem({
       day: "numeric",
       hour: "numeric",
       minute: "numeric",
-    }
+    };
     const formattedDateTime = new Date(dateTimeString).toLocaleDateString(
       undefined,
       options
-    )
-    return formattedDateTime
-  }
+    );
+    return formattedDateTime;
+  };
   return (
     <>
       <div>{read}</div>
@@ -32,7 +32,7 @@ function JobDetailItem({
       <div>{period}</div>
       <div>{type}</div>
     </>
-  )
+  );
 }
 
-export default JobDetailItem
+export default JobDetailItem;

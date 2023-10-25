@@ -1,27 +1,27 @@
-import { DisableButton } from "../DisableButton"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { DisableButton } from "../DisableButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronDown,
   faChevronUp,
   faAnglesLeft,
   faAnglesRight,
-} from "@fortawesome/free-solid-svg-icons"
-import { JobProp } from "../../app/reducers/jobs"
+} from "@fortawesome/free-solid-svg-icons";
+import { JobProp } from "../../app/reducers/jobs";
 
 export interface PaginationProp {
-  limit: number
-  page: number
-  data: JobProp[] | undefined
-  nextPage: () => void
-  prevPage: () => void
-  limitPlus: () => void
-  limitMinus: () => void
+  limit: number;
+  page: number;
+  paginationData: object[];
+  nextPage: () => void;
+  prevPage: () => void;
+  limitPlus: () => void;
+  limitMinus: () => void;
 }
 
 function Pagination({
   limit,
   page,
-  data,
+  paginationData,
   nextPage,
   prevPage,
   limitPlus,
@@ -30,7 +30,7 @@ function Pagination({
   const style = {
     btn: `text-black text-[15px] bg-white rounded-3xl px-2 py-1  border border-[#87C4E7]`,
     text: `text-lg font-bold text-black`,
-  }
+  };
   return (
     <>
       <div className="flex justify-between items-center mr-4">
@@ -70,28 +70,26 @@ function Pagination({
             icon={faAnglesLeft}
             size="lg"
             style={{
-              "--fa-primary-color": "#000000",
-              "--fa-secondary-color": "#000000",
+              color: "#000000",
             }}
           />
         </DisableButton>
         <span className={`${style.text} mx-2`}>page</span>
         <DisableButton
           clickHandler={nextPage}
-          isDisabled={!(data?.length !== limit)}
+          isDisabled={!(paginationData.length !== limit)}
         >
           <FontAwesomeIcon
             icon={faAnglesRight}
             size="lg"
             style={{
-              "--fa-primary-color": "#000000",
-              "--fa-secondary-color": "#000000",
+              color: "#000000",
             }}
           />
         </DisableButton>
       </div>
     </>
-  )
+  );
 }
 
-export default Pagination
+export default Pagination;

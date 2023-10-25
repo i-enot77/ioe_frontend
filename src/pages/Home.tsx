@@ -1,8 +1,8 @@
-import Alarms from "../components/alarms/Alarms"
-import { Jobs } from "../components/jobs/Jobs"
-import { ButtonsArea } from "../components/sites/ButtonsArea"
-import Sites from "../components/sites/Sites"
-import SitesHeader from "../components/sites/SitesHeader"
+import Alarms from "../components/alarms/Alarms";
+import { Jobs } from "../components/jobs/Jobs";
+import { ButtonsArea } from "../components/sites/ButtonsArea";
+import Sites from "../components/sites/Sites";
+import SitesHeader from "../components/sites/SitesHeader";
 
 const Home = () => {
   return (
@@ -13,10 +13,10 @@ const Home = () => {
         <ButtonsArea />
       </div>
       <div className="w-full h-[45%] flex">
-        <Alarms />
+        <Alarms detailPage={false} />
         <Jobs detailPage={false} />
       </div>
     </section>
-  )
-}
-export default Home
+  );
+};
+export default Home;

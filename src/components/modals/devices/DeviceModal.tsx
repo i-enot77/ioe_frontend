@@ -1,53 +1,52 @@
-import { InputItem } from "../../../forms/InputItem"
-import { TextareaItem } from "../../../forms/TextareaItem"
-import { TimezonePicker } from "../../TimezonePicker"
-import { Button } from "../../Button"
-import Form from "../../../forms/Form"
-import { useAppDispatch, useAppSelector } from "../../../app/hooks"
+import { InputItem } from "../../../forms/InputItem";
+import { TextareaItem } from "../../../forms/TextareaItem";
+import { TimezonePicker } from "../../TimezonePicker";
+import { Button } from "../../Button";
+import Form from "../../../forms/Form";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import {
   addDevice,
   updateDevField,
   updateDevice,
-} from "../../../app/reducers/devices"
-import { data } from "./data"
-import { initOption } from "../../../app/reducers/option"
-import { EditInputProp } from "../../types"
+} from "../../../app/reducers/devices";
+import { data } from "./data";
+import { initOption } from "../../../app/reducers/option";
+import { EditInputProp } from "../../types";
 
 const style = {
   inputClass: `border border-[#EEF3F8] rounded px-4 py-1 mt-1 placeholder:text-sm placeholder:text-[#808080]`,
   labelClass: `text-sm text-black flex flex-col mb-4 last:mb-0`,
   btn: `bg-[#87C4E7] rounded-lg text-white w-full py-1 text-base font-bold mt-3`,
   wrapper: `bg-white px-16 py-6 rounded-md`,
-}
+};
 
 export type DevProp = {
-  isOpen: boolean
-  isEdit?: boolean
-  wrapperStyle: string
-}
+  isOpen: boolean;
+  isEdit?: boolean;
+};
 
-export default function DeviceModal({ isOpen, isEdit, wrapperStyle }: DevProp) {
-  const dispatch = useAppDispatch()
-  const deviceData = useAppSelector((state) => state.device.deviceData)
+export default function DeviceModal({ isOpen, isEdit }: DevProp) {
+  const dispatch = useAppDispatch();
+  const deviceData = useAppSelector((state) => state.device.deviceData);
 
   const handleChange = (e: EditInputProp) => {
-    const { name, value } = e.target
-    dispatch(updateDevField({ [name]: value }))
-  }
+    const { name, value } = e.target;
+    dispatch(updateDevField({ [name]: value }));
+  };
 
   const editDeviceSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    dispatch(updateDevice(deviceData))
-  }
+    e.preventDefault();
+    dispatch(updateDevice(deviceData));
+  };
 
   const addDeviceSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    dispatch(addDevice(deviceData))
-    dispatch(initOption())
-  }
+    e.preventDefault();
+    dispatch(addDevice(deviceData));
+    dispatch(initOption());
+  };
 
   return isOpen ? (
-    <div className={`${style.wrapper} ${wrapperStyle} `}>
+    <div className={`${style.wrapper}`}>
       <p className="title mb-5">{isEdit ? "Edit a device" : "Add a device"}</p>
       <Form
         submit={isEdit ? editDeviceSubmit : addDeviceSubmit}
@@ -85,5 +84,5 @@ export default function DeviceModal({ isOpen, isEdit, wrapperStyle }: DevProp) {
         </Button>
       </Form>
     </div>
-  ) : null
+  ) : null;
 }

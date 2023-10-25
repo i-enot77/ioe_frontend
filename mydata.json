@@ -232,7 +232,8 @@
         "config": "string"
       },
       "location": "Warszawa",
-      "type": "44Alpha"
+      "type": "44Alpha",
+      "siteId": 4
     },
     {
       "id": 5,
@@ -272,6 +273,19 @@
       "location": "Warszawa",
       "type": "44Alpha",
       "siteId": 1
+    },
+    {
+      "id": 8,
+      "name": "name8",
+      "imei": "imei7",
+      "ip": "ipnumber7",
+      "version": "version7",
+      "config": {
+        "config": "string"
+      },
+      "location": "Warszawa",
+      "type": "44Alpha",
+      "siteId": 4
     }
   ],
   "sites": [
