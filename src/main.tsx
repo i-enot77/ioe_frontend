@@ -1,14 +1,14 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
-import App from "./App.tsx"
-import "./index.css"
-import TimeAgo from "javascript-time-ago"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import TimeAgo from "javascript-time-ago";
 
-import en from "javascript-time-ago/locale/en.json"
-import { store } from "./app/store.ts"
-import { Provider } from "react-redux"
+import en from "javascript-time-ago/locale/en.json";
+import { store } from "./services/store.ts";
+import { Provider } from "react-redux";
 
-TimeAgo.addDefaultLocale(en)
+TimeAgo.addDefaultLocale(en);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -16,4 +16,4 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <App />
     </Provider>
   </React.StrictMode>
-)
+);

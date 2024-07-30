@@ -1,16 +1,14 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function useCheckKey() {
   //if device klicked/ckicked twice
-  const [openValue, setOpenValue] = useState<undefined | number | string>(
-    undefined
-  )
-  const checkKey = (keyProp: number | string | undefined) => {
-    setOpenValue(openValue !== keyProp ? keyProp : undefined)
-  }
+  const [openValue, setOpenValue] = useState<string | null>(null);
+  const checkKey = (keyProp: string) => {
+    setOpenValue(openValue !== keyProp ? keyProp : null);
+  };
   return {
     openValue,
     setOpenValue,
     checkKey,
-  }
+  };
 }

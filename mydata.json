@@ -3,37 +3,37 @@
     {
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name211111",
+      "devName": "name1",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
-      "id": 1,
-      "modemId": 2
+      "modemId": 2,
+      "id": "1"
     },
     {
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name22",
+      "devName": "name22",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
-      "id": 2,
+      "id": "2",
       "modemId": 3
     },
     {
-      "id": 3,
+      "id": "3",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name23",
+      "devName": "name23",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
@@ -42,50 +42,50 @@
     {
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name2444444",
+      "devName": "name2444444",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
-      "id": 4,
+      "id": "4",
       "modemId": 1
     },
     {
-      "id": 5,
+      "id": "5",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name2525",
+      "devName": "name2525",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 1
     },
     {
-      "id": 6,
+      "id": "6",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name26",
+      "devName": "name26",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 2
     },
     {
-      "id": 7,
+      "id": "7",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name27",
+      "devName": "name27",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
@@ -94,89 +94,76 @@
     {
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name211111",
+      "devName": "name211111",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
-      "id": 1,
+      "id": "8",
       "modemId": 1
     },
     {
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name22",
+      "devName": "name22",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
-      "id": 2,
+      "id": "9",
       "modemId": 4
     },
     {
-      "id": 3,
+      "id": "10",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name23",
+      "devName": "name23",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 5
     },
     {
+      "id": "12",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name2444444",
+      "devName": "name2525",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
-      },
-      "timezone": "UTC 2 Warsaw time",
-      "site": "Site_A",
-      "id": 4,
-      "modemId": 4
-    },
-    {
-      "id": 5,
-      "serialNumber": "MKTG122449",
-      "modem": "Modem_A",
-      "name": "name2525",
-      "type": "44Alpha",
-      "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 3
     },
     {
-      "id": 6,
+      "id": "13",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name26",
+      "devName": "name26",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 1
     },
     {
-      "id": 7,
+      "id": "14",
       "serialNumber": "MKTG122449",
       "modem": "Modem_A",
-      "name": "name27",
+      "devName": "name27",
       "type": "44Alpha",
       "loginInfo": {
-        "json": "I am Json "
+        "loginInfo": "I am Json "
       },
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
@@ -185,8 +172,8 @@
   ],
   "modems": [
     {
-      "id": 1,
-      "name": "name1",
+      "id": "1",
+      "modemName": "name1",
       "imei": "imei1",
       "ip": "ipnumber1",
       "version": "version1",
@@ -197,7 +184,7 @@
       "type": "44Alpha"
     },
     {
-      "name": "name2",
+      "modemName": "name2",
       "imei": "imei2",
       "ip": "ipnumber2",
       "version": "version2",
@@ -206,12 +193,12 @@
       },
       "location": "Warszawa",
       "type": "44Alpha",
-      "id": 2,
+      "id": "2",
       "siteId": 2
     },
     {
-      "id": 3,
-      "name": "name3",
+      "id": "3",
+      "modemName": "name3",
       "imei": "imei3",
       "ip": "ipnumber3",
       "version": "version3",
@@ -223,8 +210,8 @@
       "siteId": 1
     },
     {
-      "id": 4,
-      "name": "name4",
+      "id": "4",
+      "modemName": "name4",
       "imei": "imei4",
       "ip": "ipnumber4",
       "version": "version4",
@@ -236,8 +223,8 @@
       "siteId": 4
     },
     {
-      "id": 5,
-      "name": "name5",
+      "id": "5",
+      "modemName": "name5",
       "imei": "imei5",
       "ip": "ipnumber5",
       "version": "version5",
@@ -249,8 +236,8 @@
       "siteId": 1
     },
     {
-      "id": 6,
-      "name": "name6",
+      "id": "6",
+      "modemName": "name6",
       "imei": "imei6",
       "ip": "ipnumber6",
       "version": "version6",
@@ -262,8 +249,8 @@
       "siteId": 4
     },
     {
-      "id": 7,
-      "name": "name7",
+      "id": "7",
+      "modemName": "name7",
       "imei": "imei7",
       "ip": "ipnumber7",
       "version": "version7",
@@ -275,8 +262,8 @@
       "siteId": 1
     },
     {
-      "id": 8,
-      "name": "name8",
+      "id": "8",
+      "modemName": "name8",
       "imei": "imei7",
       "ip": "ipnumber7",
       "version": "version7",
@@ -330,10 +317,10 @@
       },
       "status": "running",
       "type": "Cty",
-      "id": 1
+      "id": "1"
     },
     {
-      "id": 2,
+      "id": "2",
       "deviceName": "name2",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -346,7 +333,7 @@
       "type": "Bthrey"
     },
     {
-      "id": 3,
+      "id": "3",
       "deviceName": "name3",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -359,7 +346,7 @@
       "type": "Alpha"
     },
     {
-      "id": 4,
+      "id": "4",
       "deviceName": "name4",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -372,7 +359,7 @@
       "type": "Tetha"
     },
     {
-      "id": 5,
+      "id": "5",
       "deviceName": "name5",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -385,7 +372,7 @@
       "type": "Mega"
     },
     {
-      "id": 6,
+      "id": "6",
       "deviceName": "name6",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -398,7 +385,7 @@
       "type": "Cty"
     },
     {
-      "id": 7,
+      "id": "7",
       "deviceName": "name7",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -411,7 +398,7 @@
       "type": "Mega"
     },
     {
-      "id": 8,
+      "id": "8",
       "deviceName": "name8",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -424,7 +411,7 @@
       "type": "Alpha"
     },
     {
-      "id": 9,
+      "id": "9",
       "deviceName": "name9",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -437,7 +424,7 @@
       "type": "Alpha"
     },
     {
-      "id": 10,
+      "id": "10",
       "deviceName": "name10",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -450,7 +437,7 @@
       "type": "Alpha"
     },
     {
-      "id": 11,
+      "id": "11",
       "deviceName": "name11",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -463,7 +450,7 @@
       "type": "Alpha"
     },
     {
-      "id": 12,
+      "id": "12",
       "deviceName": "name12",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -476,7 +463,7 @@
       "type": "Alpha"
     },
     {
-      "id": 13,
+      "id": "13",
       "deviceName": "name13",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -489,7 +476,7 @@
       "type": "Alpha"
     },
     {
-      "id": 14,
+      "id": "14",
       "deviceName": "name14",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -502,7 +489,7 @@
       "type": "Alpha"
     },
     {
-      "id": 15,
+      "id": "15",
       "deviceName": "name15",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -515,7 +502,7 @@
       "type": "Alpha"
     },
     {
-      "id": 16,
+      "id": "16",
       "deviceName": "name16",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -528,7 +515,7 @@
       "type": "Alpha"
     },
     {
-      "id": 17,
+      "id": "17",
       "deviceName": "name17",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -541,7 +528,7 @@
       "type": "Alpha"
     },
     {
-      "id": 18,
+      "id": "18",
       "deviceName": "name18",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -554,7 +541,7 @@
       "type": "Alpha"
     },
     {
-      "id": 19,
+      "id": "19",
       "deviceName": "name19",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -567,7 +554,7 @@
       "type": "Alpha"
     },
     {
-      "id": 20,
+      "id": "20",
       "deviceName": "name20",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -580,7 +567,7 @@
       "type": "Alpha"
     },
     {
-      "id": 21,
+      "id": "21",
       "deviceName": "name21",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -593,7 +580,7 @@
       "type": "Alpha"
     },
     {
-      "id": 22,
+      "id": "22",
       "deviceName": "name22",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -606,7 +593,7 @@
       "type": "Alpha"
     },
     {
-      "id": 23,
+      "id": "23",
       "deviceName": "name23",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -619,7 +606,7 @@
       "type": "Alpha"
     },
     {
-      "id": 24,
+      "id": "24",
       "deviceName": "name24",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -632,7 +619,7 @@
       "type": "Alpha"
     },
     {
-      "id": 25,
+      "id": "25",
       "deviceName": "name25",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -645,7 +632,7 @@
       "type": "Alpha"
     },
     {
-      "id": 26,
+      "id": "26",
       "deviceName": "name26",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -658,7 +645,7 @@
       "type": "Alpha"
     },
     {
-      "id": 27,
+      "id": "27",
       "deviceName": "name27",
       "period": 500,
       "startDate": "2023-07-04T13:33:03.969Z",
@@ -679,7 +666,7 @@
       "readParams": "{\"Json\": \"Im Json\"}",
       "status": "",
       "type": "",
-      "id": 28
+      "id": "28"
     }
   ],
   "alarms": [

@@ -1,9 +1,16 @@
-import { ButtonProp } from "./types"
+import React, { ButtonHTMLAttributes, ReactNode } from "react";
+import clsx from "clsx";
 
-export const Button = ({ children, buttonClass, clickHandler }: ButtonProp) => {
-  return (
-    <button className={buttonClass} onClick={clickHandler}>
-      {children}
-    </button>
-  )
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children?: ReactNode;
 }
+
+const Button: React.FC<ButtonProps> = (props) => {
+  return (
+    <button className={clsx(props.className)} {...props}>
+      {props.children}
+    </button>
+  );
+};
+
+export default Button;

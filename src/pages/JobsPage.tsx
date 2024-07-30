@@ -1,8 +1,8 @@
-import JobsDetails from "../components/jobs/JobsDetails";
+import JobsDetails from "../features/jobs/JobsDetails";
 
 function JobsPage() {
   return (
-    <section className="mt-3 mx-auto bg-[#F3F2EF] max-w-[1468px] px-3.5 h-[90%]">
+    <section className="mt-3 mx-auto bg-[#F3F2EF] w-full p-4 h-[92vh]">
       <JobsDetails />
     </section>
   );

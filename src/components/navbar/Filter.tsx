@@ -1,30 +1,30 @@
-import filter from "../../assets/img/filter.svg"
-import Dropdown from "../Dropdown"
-import { useRef, useState } from "react"
-import { InputItem } from "../../forms/InputItem"
-import useOutsideClick from "../../hooks/useOutsideClick"
-import { useAppDispatch } from "../../app/hooks"
-import { setFilterBy } from "../../app/reducers/search"
+import filter from "../../assets/img/filter.svg";
+import Dropdown from "../Dropdown";
+import { useRef, useState } from "react";
+import { InputItem } from "../../forms/InputItem";
+import useOutsideClick from "../../hooks/useOutsideClick";
+import { useAppDispatch } from "../../app/hooks";
+import { setFilterBy } from "../../app/slices/search";
 
 const style = {
   dropItem: `bg-white py-3 shadow-md pl-7 flex flex-col items-start text-xs pr-7`,
   labelClassName: "mb-2.5 last:pb-0 text-md relative",
   inputClassName:
     "w-full h-full absolute top-0 left-0 cursor-pointer opacity-0",
-}
+};
 
 const Filter = () => {
-  const [openFilter, setOpenFilter] = useState(false)
-  const dispatch = useAppDispatch()
+  const [openFilter, setOpenFilter] = useState(false);
+  const dispatch = useAppDispatch();
 
-  const filterRef = useRef<HTMLDivElement | null>(null)
+  const filterRef = useRef<HTMLDivElement | null>(null);
 
-  useOutsideClick(filterRef, openFilter, () => setOpenFilter(false))
+  useOutsideClick(filterRef, openFilter, () => setOpenFilter(false));
 
   const filterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setFilterBy(e.target.value))
-    setOpenFilter(!openFilter)
-  }
+    dispatch(setFilterBy(e.target.value));
+    setOpenFilter(!openFilter);
+  };
 
   const dropFilter = [
     {
@@ -48,7 +48,7 @@ const Filter = () => {
       inputName: "filter",
       inputValue: "users",
     },
-  ]
+  ];
 
   return (
     <div className="h-full" ref={filterRef}>
@@ -82,7 +82,7 @@ const Filter = () => {
         </Dropdown>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Filter
+export default Filter;

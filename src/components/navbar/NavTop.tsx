@@ -1,53 +1,53 @@
-import image from "../../assets/img/ioe_logo.svg"
-import Form from "../../forms/Form"
-import Filter from "./Filter"
-import SearchInputItem from "../../forms/SearchInputItem"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import image from "../../assets/img/ioe_logo.svg";
+import Form from "../../forms/Form";
+import Filter from "./Filter";
+import SearchInputItem from "../../forms/SearchInputItem";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBell,
   faCircleUser,
   faSortDown,
   faMagnifyingGlass,
   faArrowRightFromBracket,
-} from "@fortawesome/free-solid-svg-icons"
-import { useState, useRef } from "react"
-import Dropdown from "../Dropdown"
-import { dropAccount } from "../../assets/data/navData"
-import { DisableButton } from "../DisableButton"
-import { Link } from "react-router-dom"
-import useOutsideClick from "../../hooks/useOutsideClick"
-import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { searchRequest } from "../../app/reducers/search"
-import useDebounce from "../../hooks/useDebounce"
+} from "@fortawesome/free-solid-svg-icons";
+import { useState, useRef } from "react";
+import Dropdown from "../Dropdown";
+import { dropAccount } from "../../assets/data/navData";
+import { DisableButton } from "../DisableButton";
+import { Link } from "react-router-dom";
+import useOutsideClick from "../../hooks/useOutsideClick";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { searchRequest } from "../../app/slices/search";
+import useDebounce from "../../hooks/useDebounce";
 
 const style = {
   inputClass: `bg-light-gray placeholder:text-text-color text-xs ml-4 w-[250px] h-[80%] outline-none`,
   dropItem: `pr-20 bg-white py-3 shadow-md pl-7 flex flex-col items-start text-xs absolute top-16 right-6`,
-}
+};
 
 function NavTop() {
-  const [isDropAccount, setIsDropAccount] = useState(false)
-  const [inputValue, setInputValue] = useState("")
-  const debouncedSearchValue = useDebounce(inputValue, 500)
-  const dispatch = useAppDispatch()
-  const filterBy = useAppSelector((state) => state.search.filterBy)
+  const [isDropAccount, setIsDropAccount] = useState(false);
+  const [inputValue, setInputValue] = useState("");
+  const debouncedSearchValue = useDebounce(inputValue, 500);
+  const dispatch = useAppDispatch();
+  const filterBy = useAppSelector((state) => state.search.filterBy);
 
-  const refItem = useRef<HTMLDivElement | null>(null)
+  const refItem = useRef<HTMLDivElement | null>(null);
   useOutsideClick(refItem, isDropAccount, () => {
-    setIsDropAccount(false)
-  })
+    setIsDropAccount(false);
+  });
 
   const changeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value)
-  }
+    setInputValue(e.target.value);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    dispatch(searchRequest({ filter: filterBy, search: debouncedSearchValue }))
-    setInputValue("")
-    console.log(filterBy, debouncedSearchValue)
-  }
+    dispatch(searchRequest({ filter: filterBy, search: debouncedSearchValue }));
+    setInputValue("");
+    console.log(filterBy, debouncedSearchValue);
+  };
 
   return (
     <div className="w-full border-b-[1px] border-b-[#e5e7eb] py-[18px] bg-white">
@@ -80,8 +80,8 @@ function NavTop() {
             <div
               className="text-center"
               onClick={() => {
-                setIsDropAccount(!isDropAccount)
-                console.log(isDropAccount)
+                setIsDropAccount(!isDropAccount);
+                console.log(isDropAccount);
               }}
             >
               <div>
@@ -115,7 +115,7 @@ function NavTop() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default NavTop
+export default NavTop;

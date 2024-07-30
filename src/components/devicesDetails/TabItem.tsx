@@ -1,4 +1,4 @@
-import { SiteItemProp } from "../sites/siteTypes";
+import { SiteItemProp } from "../../features/sites/siteTypes";
 
 type TabItemProp = {
   tabClickHandler(): void;
