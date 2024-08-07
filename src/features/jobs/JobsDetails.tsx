@@ -5,17 +5,16 @@ import { useAppDispatch } from "../../services/hooks";
 import { RotatingLines } from "react-loader-spinner";
 import ErrorItem from "@/components/ErrorItem";
 import JobDetailItem from "./JobDetailItem";
-import SideJobsDevices from "./SideJobsDevices";
 import { setJobData } from "@/services/slices/jobs";
 import { jobTitles } from "../config/jobs";
 import JobsPanel from "@/features/jobs/JobsPanel";
 import Pagination from "@/features/jobs/Pagination";
+import { editJobOption } from "@/services/slices/option";
 
-function JobsDetails() {
-  const [openSidePanel, setOpenSidePanel] = useState(false);
-
+const JobsDetails = () => {
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(10);
+
   const {
     data: jobsArr,
     isFetching,
@@ -46,14 +45,10 @@ function JobsDetails() {
       )}
 
       {isSuccess && jobsArr ? (
-        <div className="h-full w-full flex flex-col justify-center">
+        <div className="h-full w-full flex flex-col">
           <JobsPanel />
 
-          <div
-            className={`${
-              openSidePanel ? "grid-cols-[3fr_1fr] gap-3" : "grid-cols-1"
-            } grid grid-rows-[1fr_14fr] justify-between items-start flex-grow  h-[80%] mb-4 bg-white rounded-md`}
-          >
+          <div className="w-full h-full flex-grow mb-4 bg-white rounded-md">
             <div className={style.item}>
               {jobTitles.map((title, index) => (
                 <span key={index} className="font-medium">
@@ -62,7 +57,7 @@ function JobsDetails() {
               ))}
             </div>
 
-            <div className="h-full  w-full overflow-y-auto flex flex-col">
+            <div className="h-[93%] w-full overflow-y-auto flex flex-col pb-3">
               {jobsArr.map((item) => (
                 <div
                   key={item.id}
@@ -73,7 +68,7 @@ function JobsDetails() {
                   }`}
                   onClick={() => {
                     clikedJob.checkKey(item.id);
-                    setOpenSidePanel(true);
+                    dispatch(editJobOption());
                     dispatch(setJobData(item));
                   }}
                 >
@@ -97,18 +92,12 @@ function JobsDetails() {
             setPage={setPage}
             setLimit={setLimit}
           />
-
-          {openSidePanel && (
-            <div className="h-[70%] w-full rounded-lg">
-              <SideJobsDevices />
-            </div>
-          )}
         </div>
       ) : (
         <ErrorItem error={error} />
       )}
     </>
   );
-}
+};
 
 export default JobsDetails;

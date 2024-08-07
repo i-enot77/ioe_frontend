@@ -23,16 +23,16 @@ const JobsPanel = () => {
         </div>
 
         <Button
-          className="font-bold text-black text-xl bg-[#87C4E7] p-3 rounded"
+          className=" bg-[#87C4E7] p-3 rounded"
           onClick={() => dispatch(addJobOption())}
         >
           <FontAwesomeIcon
             icon={faCirclePlus}
-            size="sm"
+            size="lg"
             style={{ color: "#000000" }}
             className="mr-2"
           />
-          New Job
+          <span className="font-bold text-black text-xl">New Job</span>
         </Button>
       </div>
     </div>

@@ -39,3 +39,7 @@ export const modemSchema: ObjectSchema<ModemWithoutID> = object({
   location: string().required("Required"),
   type: string().required("Required"),
 });
+
+export const identifierSchema: ObjectSchema<{ identifier: string }> = object({
+  identifier: string().required("Required"),
+});

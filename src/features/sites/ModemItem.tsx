@@ -64,15 +64,6 @@ const ModemItem = ({ modName, modem, onModemClick }: ModemItemProp) => {
                   openValue !== device.id ? "bg-white" : "bg-[#D9D9D9]"
                 }  first:rounded-t-lg last:rounded-b-lg`}
                 onClick={() => onDeviceClick(device)}
-                // className={`${style.childItem} ${
-                //   devState.value ? "text-[#87C4E7]" : "text-[#808080]"
-                // }`}
-                // onClick={() => {
-                //   devState.toggleState();
-                //   dispatch(setDevDataById(id));
-                //   dispatch(devPanelToFalse());
-                // }}
-                // onBlur={devState.toFalse}
               >
                 device {device.devName}
               </div>

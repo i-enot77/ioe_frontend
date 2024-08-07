@@ -22,7 +22,7 @@ export const dropAccount = [
 
 export const navItems = [
   {
-    src: "/test",
+    src: "/view",
     content: "Views",
   },
   {

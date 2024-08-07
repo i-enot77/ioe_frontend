@@ -12,12 +12,10 @@ export type DevProps = {
   } | null;
   timezone: ITimezone | string;
   site?: string;
-  // [key: string]: unknown;
 };
 
 export const modemApi = ioeApi.injectEndpoints({
   endpoints: (build) => ({
-    //should have get devices by modem api
     getDevicesArr: build.query<DevProps[], void>({
       query: () => "devices",
       providesTags: (result) =>

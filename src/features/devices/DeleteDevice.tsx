@@ -24,7 +24,7 @@ export default function DeleteDevice() {
             Delete device
           </Button>
         </div>
-        <Devices />
+        <Devices isDraggable={false} />
       </div>
     </div>
   );

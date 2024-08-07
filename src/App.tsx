@@ -6,10 +6,11 @@ import Navbar from "./components/Navbar";
 // import JobsPage from "./pages/JobsPage";
 import { SiteDetails } from "./features/sites/SiteDetails";
 import JobsPage from "./pages/JobsPage";
+import Views from "./pages/Views";
 
 function App() {
   return (
-    <div className="w-full h-screen flex flex-col justify-end overflow-hidden  bg-[#F3F2EF]">
+    <div className="w-full h-screen flex flex-col justify-end overflow-y-auto  bg-[#F3F2EF]">
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -18,6 +19,7 @@ function App() {
           <Route path={"/details"} element={<SiteDetails />} />
           <Route path={"/jobs"} element={<JobsPage />} />
           <Route path={"/devices"} element={<SiteDetails />} />
+          <Route path={"/view"} element={<Views />} />
         </Routes>
       </BrowserRouter>
     </div>

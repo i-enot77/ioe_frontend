@@ -1,7 +1,5 @@
 import DeviceItem from "./DeviceItem";
 import useCheckKey from "../../hooks/useCheckKey";
-import { useSelector } from "react-redux";
-import { RootState } from "@/services/store";
 import { useAppDispatch } from "@/services/hooks";
 import { setDeviceData } from "@/services/slices/devices";
 import { useLazyGetDevicesArrQuery } from "@/services/deviceApi";
@@ -19,8 +17,7 @@ const headerContent = [
   "Site",
 ];
 
-export default function Devices() {
-  const deviceData = useSelector((state: RootState) => state.device.deviceData);
+const Devices = ({ isDraggable }: { isDraggable: boolean }) => {
   const dispatch = useAppDispatch();
   const [fetchDevices, { data: devicesArr }] = useLazyGetDevicesArrQuery();
 
@@ -42,31 +39,23 @@ export default function Devices() {
       </div>
 
       <div className="w-full  text-[rgba(0, 0, 0, 0.78)]">
-        {devicesArr?.map((item) => (
-          <div
-            key={item.id}
-            onClick={() => {
-              checkKey(item.id);
-              dispatch(setDeviceData(item));
-              console.log(deviceData);
-            }}
-            className={`${
-              openValue !== item.id ? "bg-white" : "bg-[#D9D9D9]"
-            } ${style.item}`}
-          >
+        {devicesArr &&
+          devicesArr?.map((item) => (
             <DeviceItem
-              id={item.id}
-              serialNumber={item.serialNumber}
-              modem={item.modem}
-              devName={item.devName}
-              type={item.type}
-              timezone={item.timezone}
-              site={item.site}
-              assignModal={true}
+              key={item.id}
+              onClick={() => {
+                checkKey(item.id);
+                dispatch(setDeviceData(item));
+              }}
+              isDraggable={isDraggable}
+              className={`${
+                openValue !== item.id ? "bg-white" : "bg-[#D9D9D9]"
+              } ${style.item}`}
+              device={item}
             />
-          </div>
-        ))}
+          ))}
       </div>
     </div>
   );
-}
+};
+export default Devices;

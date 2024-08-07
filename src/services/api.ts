@@ -5,6 +5,6 @@ export const ioeApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: import.meta.env.VITE_URL,
   }),
-  tagTypes: ["Jobs", "Modems", "Devices", "Sites", "Alarms"],
+  tagTypes: ["Jobs", "Modems", "Devices", "Sites", "Alarms", "Views"],
   endpoints: () => ({}),
 });

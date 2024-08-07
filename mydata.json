@@ -706,5 +706,179 @@
       "time": "2023-08-20T15:00:03.969Z",
       "status": "waiting"
     }
+  ],
+  "views": [
+    {
+      "id": "1",
+      "identifier": "View1",
+      "devices": [
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name1",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 2,
+          "id": "1"
+        },
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name22",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "id": "2",
+          "modemId": 3
+        },
+        {
+          "id": "3",
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name23",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 1
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "identifier": "View1",
+      "devices": [
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name1",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 2,
+          "id": "1"
+        },
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name22",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "id": "2",
+          "modemId": 3
+        },
+        {
+          "id": "3",
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name23",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 1
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "identifier": "View1",
+      "devices": [
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name1",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 2,
+          "id": "1"
+        },
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name22",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "id": "2",
+          "modemId": 3
+        },
+        {
+          "id": "3",
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name23",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 1
+        }
+      ]
+    },
+    {
+      "identifier": "view77",
+      "devices": [],
+      "id": "1ZHah1r"
+    },
+    {
+      "identifier": "view78",
+      "devices": [
+        {
+          "id": "3",
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name23",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 1
+        },
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name2444444",
+          "type": "44Alpha",
+          "loginInfo": {
+            "loginInfo": "I am Json "
+          },
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "id": "4",
+          "modemId": 1
+        }
+      ],
+      "id": "PMclpEU"
+    }
   ]
 }

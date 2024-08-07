@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface InitOptionProp {
   option:
@@ -10,10 +10,13 @@ export interface InitOptionProp {
     | "editJob"
     | "deleteJob"
     | null;
+
+  isViewModal: boolean;
 }
 
 const initialState: InitOptionProp = {
   option: null,
+  isViewModal: false,
 };
 export const optionSlice = createSlice({
   name: "option",
@@ -43,6 +46,10 @@ export const optionSlice = createSlice({
     initOption(state) {
       state.option = initialState.option;
     },
+
+    toggleViewModal(state, action: PayloadAction<boolean>) {
+      state.isViewModal = action.payload;
+    },
   },
 });
 
@@ -55,5 +62,6 @@ export const {
   editJobOption,
   deleteJobOption,
   initOption,
+  toggleViewModal,
 } = optionSlice.actions;
 export default optionSlice.reducer;

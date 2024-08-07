@@ -1,5 +1,4 @@
 import { useState } from "react";
-import SearchInputItem from "../../forms/SearchInputItem";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useAppDispatch } from "../../services/hooks";
@@ -56,7 +55,7 @@ export default function AssignDevice() {
           />
         </div> */}
 
-        <Devices />
+        <Devices isDraggable={false} />
       </div>
       {deviceItem && <DeviceToModal />}
     </div>

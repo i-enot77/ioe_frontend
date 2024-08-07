@@ -15,8 +15,8 @@ export const store = configureStore({
     option: optionSlice.reducer,
     modems: modemSlice.reducer,
     jobs: jobSlice.reducer,
-
     tabs: tabSlice.reducer,
+
     search: searchSlice.reducer,
 
     [ioeApi.reducerPath]: ioeApi.reducer,

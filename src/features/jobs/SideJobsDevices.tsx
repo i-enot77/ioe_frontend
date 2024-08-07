@@ -1,6 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import DeviceModal from "../devices/DeviceModal";
 import EditJob from "@/features/jobs/EditJob";
+import JobModal from "./JobModal";
 
 const SideJobsDevices = () => {
   return (
@@ -18,7 +19,7 @@ const SideJobsDevices = () => {
           value="job"
           className="bg-white flex-grow grid-flow-col grid-rows-1 rounded-md px-3 py-4  overflow-y-auto"
         >
-          <EditJob />
+          <JobModal isEdit={true} />
         </TabsContent>
         <TabsContent
           value="device"

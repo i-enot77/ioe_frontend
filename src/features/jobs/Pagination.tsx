@@ -53,7 +53,7 @@ function Pagination({
   };
 
   return (
-    <div className="w-[70%] bg-[#F3F2EF] flex justify-between items-center mx-auto">
+    <div className="w-[70%] py-2 flex justify-between items-center mx-auto">
       <div className="flex justify-between items-center mr-4">
         <span className={`${style.text} mr-3`}>Show</span>
         <div className="flex items-center text-black text-lg border border-[#87C4E7] rounded p-2 relative w-[60px]">

@@ -3,6 +3,8 @@ import { useAppDispatch } from "../services/hooks";
 import { initOption } from "../services/slices/option";
 import clsx from "clsx";
 import { setClicked, setClickedItem } from "@/services/slices/sites";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 type ModalProps = {
   children: ReactNode;
@@ -28,11 +30,22 @@ export const Modal = ({ children, onClick, className }: ModalProps) => {
     >
       <div
         className={clsx(
-          "bg-[#EEF3F8] rounded-md p-10 m-10 flex justify-center items-center",
+          "bg-[#EEF3F8] rounded-md p-10 m-10 flex justify-center items-center relative",
           className
         )}
         onClick={(e) => e.stopPropagation()}
       >
+        <div
+          className="absolute top-3 right-3 cursor-pointer"
+          onClick={combinedOnClick}
+        >
+          <FontAwesomeIcon
+            icon={faXmark}
+            size="xl"
+            style={{ color: "#000000" }}
+          />
+        </div>
+
         {children}
       </div>
     </div>
