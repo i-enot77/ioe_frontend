@@ -15,13 +15,13 @@ const initialState: DevInitStateProps = {
   deviceData: null,
 };
 
-export const fetchDevices = createAsyncThunk(
-  "device/fetchDevices",
-  async () => {
-    const res = await axios.get("http://localhost:3500/devices");
-    return res.data;
-  }
-);
+// export const fetchDevices = createAsyncThunk(
+//   "device/fetchDevices",
+//   async () => {
+//     const res = await axios.get("http://localhost:3500/devices");
+//     return res.data;
+//   }
+// );
 
 export const deviceSlice = createSlice({
   name: "device",
@@ -30,20 +30,18 @@ export const deviceSlice = createSlice({
     setDeviceData(state, action: PayloadAction<DevProps | null>) {
       state.deviceData = action.payload;
     },
+    addDevice(state, action: PayloadAction<DevProps>) {
+      state.devices.push(action.payload);
+    },
     initDevData(state) {
       state.deviceData = initialState.deviceData;
     },
-    // setDevDataById(state, action: PayloadAction<DevProps["id"]>) {
-    //   const getDevice = state.devices.filter(
-    //     (item) => item.id === action.payload
-    //   );
-    //   state.deviceData = getDevice[0];
-    // },
     setDevArr(state, action: PayloadAction<DevProps[]>) {
       state.devices = action.payload;
     },
   },
 });
 
-export const { setDeviceData, initDevData, setDevArr } = deviceSlice.actions;
+export const { setDeviceData, addDevice, initDevData, setDevArr } =
+  deviceSlice.actions;
 export default deviceSlice.reducer;

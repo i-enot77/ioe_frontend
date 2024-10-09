@@ -30,7 +30,8 @@ const DeviceModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
     values: DevProps,
     actions: FormikHelpers<DevProps>
   ) => {
-    addDev(values).then(() => {
+    const { id, ...devValues } = values;
+    addDev(devValues).then(() => {
       // dispatch(setDeviceData(values));
       actions.setSubmitting(false);
       dispatch(initOption());
@@ -48,17 +49,19 @@ const DeviceModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
     });
   };
 
-  const initialValues: DevProps = isEdit
-    ? deviceData
-    : {
-        serialNumber: "",
-        modem: "",
-        devName: "",
-        type: "",
-        loginInfo: null,
-        timezone: "",
-        site: "",
-      };
+  const initialValues: DevProps =
+    isEdit && deviceData
+      ? deviceData
+      : {
+          id: "",
+          serialNumber: "",
+          modem: "",
+          devName: "",
+          type: "",
+          loginInfo: null,
+          timezone: "",
+          site: "",
+        };
 
   const style = {
     header: `text-lg font-medium my-1`,

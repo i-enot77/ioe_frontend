@@ -7,10 +7,19 @@ import Button from "@/components/Button";
 import { useCreateViewMutation, ViewWithoutID } from "@/services/viewApi";
 import { DevProps } from "@/services/deviceApi";
 import { toggleViewModal } from "@/services/slices/option";
+import { useSelector } from "react-redux";
+import { RootState } from "@/services/store";
+import { addDevice, setDevArr } from "@/services/slices/devices";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const NewView = () => {
   const [viewDevices, setViewDevices] = useState<DevProps[]>([]);
   const [identifier, setIdentifier] = useState("");
+
+  const availableDevices = useSelector(
+    (state: RootState) => state.device.devices
+  );
 
   const dispatch = useAppDispatch();
   const [create] = useCreateViewMutation();
@@ -24,8 +33,14 @@ const NewView = () => {
         const existingItem = viewDevices.find(
           (device) => device.id === item.id
         );
-        if (!existingItem) setViewDevices([...viewDevices, item]);
-        // dispatch(addDevice(item));
+        if (!existingItem) {
+          setViewDevices([...viewDevices, item]);
+          dispatch(
+            setDevArr(
+              availableDevices.filter((device) => device.id !== item.id)
+            )
+          );
+        }
       } catch (error) {
         console.error("Error parsing JSON:", error);
       }
@@ -48,6 +63,11 @@ const NewView = () => {
     setIdentifier("");
     setViewDevices([]);
     dispatch(toggleViewModal(false));
+  };
+
+  const deleteDevice = (viewDev: DevProps) => {
+    setViewDevices(viewDevices.filter((device) => device.id !== viewDev.id));
+    dispatch(addDevice(viewDev));
   };
 
   const style = {
@@ -100,11 +120,20 @@ const NewView = () => {
           viewDevices.map((item) => (
             <div
               key={item.id}
-              className="w-full grid grid-rows-1 grid-cols-3 gap-2 mb-2 last:mb-0"
+              className="w-full flex items-center justify-between mb-2 last:mb-0"
             >
-              <div>{item.serialNumber}</div>
-              <div>{item.devName}</div>
-              <div>{item.type}</div>
+              <div className="w-full grid grid-rows-1 grid-cols-3 gap-2">
+                <div>{item.serialNumber}</div>
+                <div>{item.devName}</div>
+                <div>{item.type}</div>
+              </div>
+              <Button onClick={() => deleteDevice(item)}>
+                <FontAwesomeIcon
+                  icon={faXmark}
+                  style={{ color: "#000000" }}
+                  size="lg"
+                />
+              </Button>
             </div>
           ))
         ) : (
