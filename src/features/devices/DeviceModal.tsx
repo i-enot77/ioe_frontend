@@ -9,15 +9,8 @@ import {
   useAddDevItemMutation,
   useUpdateDevItemMutation,
 } from "../../services/deviceApi";
-import TimezoneSelectField from "@/components/TimezoneSelectField";
 import { initDevData } from "@/services/slices/devices";
-
-// const style = {
-//   inputClass: `border border-[#EEF3F8] rounded px-4 py-1 mt-1 placeholder:text-sm placeholder:text-[#808080]`,
-//   labelClass: `text-sm text-black flex flex-col mb-4 last:mb-0`,
-//   btn: `bg-[#87C4E7] rounded-lg text-white w-full py-1 text-base font-bold mt-3`,
-//   wrapper: `bg-white px-16 py-6 rounded-md`,
-// };
+import { style } from "../config/style";
 
 const DeviceModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
   const dispatch = useAppDispatch();
@@ -32,7 +25,6 @@ const DeviceModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
   ) => {
     const { id, ...devValues } = values;
     addDev(devValues).then(() => {
-      // dispatch(setDeviceData(values));
       actions.setSubmitting(false);
       dispatch(initOption());
       dispatch(initDevData());
@@ -58,19 +50,9 @@ const DeviceModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
           modem: "",
           devName: "",
           type: "",
-          loginInfo: null,
-          timezone: "",
+          loginInfo: "",
           site: "",
         };
-
-  const style = {
-    header: `text-lg font-medium my-1`,
-    field: `flex flex-col mb-2 last:mb-0`,
-    label: ``,
-    input: `px-2 py-1 rounded border border-stone-400 mt-1`,
-    error: `text-red-600 self-end text-sm pr-2`,
-    wrapper: ``,
-  };
 
   return (
     <div
@@ -188,10 +170,6 @@ const DeviceModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
               {errors.site && touched.site ? (
                 <div className={style.error}>Pole jest wymagane</div>
               ) : null}
-            </div>
-
-            <div className={style.field}>
-              <TimezoneSelectField name="timezone" />
             </div>
 
             <div className="flex justify-between">

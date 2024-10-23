@@ -3,11 +3,6 @@ import { RootState } from "@/services/store";
 import Jobs from "./Jobs";
 import JobModal from "./JobModal";
 
-const style = {
-  item: `w-full p-3 flex justify-between border-b border-[rgba(128, 128, 128, 0.14)] bg-white`,
-  inputClass: ` w-full bg-white placeholder:text-text-color placeholder:text-[10px] p-1 ml-1 outline-none `,
-};
-
 const EditJob = () => {
   const jobItem = useSelector((state: RootState) => state.jobs.jobData);
 

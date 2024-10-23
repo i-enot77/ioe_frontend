@@ -11,6 +11,7 @@ import { JobProp } from "@/services/jobsApi";
 import { initJobData } from "@/services/slices/jobs";
 import DatePickerField from "@/components/DatePickerField";
 import { jobSchema } from "@/components/schema";
+import { style } from "../config/style";
 
 const JobModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
   const dispatch = useAppDispatch();
@@ -20,7 +21,8 @@ const JobModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
   const [updateJob] = useUpdateJobItemMutation();
 
   const addJobSubmit = (values: JobProp, actions: FormikHelpers<JobProp>) => {
-    addJob(values).then(() => {
+    const { id, ...data } = values;
+    addJob(data).then(() => {
       actions.setSubmitting(false);
       dispatch(initOption());
       dispatch(initJobData());
@@ -34,15 +36,6 @@ const JobModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
     });
   };
 
-  const style = {
-    header: "text-lg font-medium my-1",
-    field: "flex flex-col mb-2 last:mb-0",
-    label: "",
-    input: "px-2 py-1 rounded border border-stone-400 mt-1",
-    error: "text-red-600 self-end text-sm pr-2",
-    wrapper: "",
-  };
-
   const initialValues: JobProp =
     isEdit && jobData
       ? {
@@ -53,9 +46,10 @@ const JobModal: React.FC<{ isEdit: boolean }> = ({ isEdit }) => {
           stopDate: jobData.stopDate ? new Date(jobData.stopDate) : new Date(),
         }
       : {
+          id: "",
           deviceName: "",
-          period: 0,
-          read: 0,
+          period: null,
+          read: null,
           readParams: null,
           status: "",
           type: "",

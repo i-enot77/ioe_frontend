@@ -4,11 +4,9 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import useCheckKey from "@/hooks/useCheckKey";
 import { ViewProp } from "@/services/viewApi";
 
 export default function ViewItem({ view }: { view: ViewProp }) {
-  // const { openValue, checkKey } = useCheckKey();
   return (
     <div>
       <Accordion type="single" collapsible className="w-full">

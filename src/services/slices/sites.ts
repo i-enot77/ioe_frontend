@@ -16,7 +16,6 @@ export interface initStateProps {
 const initialState: initStateProps = {
   sites: [],
   siteItemId: null,
-  // ----> po kliknięciu w Site, przyciski dla ButtonsArea się włączą
   // sprawdzam czy klikam raz czy dwa
   clickedItem: null,
   // ----> po kliknięciu - zalezność czy się odpalą przyciski

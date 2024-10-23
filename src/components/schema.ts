@@ -8,10 +8,7 @@ export const deviceSchema: ObjectSchema<DevPropsWithoutId> = object({
   modem: string().required("Required"),
   devName: string().required("Required"),
   type: string().required("Required"),
-  loginInfo: object({
-    loginInfo: string().required("Required"),
-  }).nullable(),
-  timezone: string().required("Required"),
+  loginInfo: string(),
   site: string().required("Required"),
 });
 

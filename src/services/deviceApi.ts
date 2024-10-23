@@ -1,5 +1,5 @@
-import { ITimezone } from "react-timezone-select";
 import { ioeApi } from "./api";
+import { DevPropsWithoutId } from "./slices/devices";
 
 export type DevProps = {
   id: string;
@@ -7,10 +7,7 @@ export type DevProps = {
   modem: string;
   devName: string;
   type: string;
-  loginInfo?: {
-    loginInfo: string;
-  } | null;
-  timezone: ITimezone | string;
+  loginInfo?: string;
   site?: string;
 };
 
@@ -32,7 +29,7 @@ export const modemApi = ioeApi.injectEndpoints({
       providesTags: (result, error, id) => [{ type: "Devices", id }],
     }),
 
-    addDevItem: build.mutation<DevProps, Partial<DevProps>>({
+    addDevItem: build.mutation<DevProps, DevPropsWithoutId>({
       query(body) {
         return {
           url: "devices",

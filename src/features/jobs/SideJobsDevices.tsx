@@ -1,6 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import DeviceModal from "../devices/DeviceModal";
-import EditJob from "@/features/jobs/EditJob";
 import JobModal from "./JobModal";
 
 const SideJobsDevices = () => {

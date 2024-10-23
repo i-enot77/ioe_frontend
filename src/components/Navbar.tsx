@@ -56,13 +56,13 @@ function Navbar() {
           >
             <MenuItems anchor="bottom" className={style.deviceMenu}>
               <MenuItem>
-                <Link to={"/test"}>Current active</Link>
+                <Link to={"/"}>Current active</Link>
               </MenuItem>
               <MenuItem>
-                <Link to={"/test"}>Dead devices</Link>
+                <Link to={"/"}>Dead devices</Link>
               </MenuItem>
               <MenuItem>
-                <Link to={"/test"}>All devices</Link>
+                <Link to={"/"}>All devices</Link>
               </MenuItem>
             </MenuItems>
           </Transition>

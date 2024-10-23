@@ -1,9 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import { TestPage } from "./pages/TestPage";
 import Navbar from "./components/Navbar";
-// import JobsPage from "./pages/JobsPage";
 import { SiteDetails } from "./features/sites/SiteDetails";
 import JobsPage from "./pages/JobsPage";
 import Views from "./pages/Views";
@@ -15,7 +13,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path={"/"} element={<Home />} />
-          <Route path={"/test"} element={<TestPage />} />
           <Route path={"/details"} element={<SiteDetails />} />
           <Route path={"/jobs"} element={<JobsPage />} />
           <Route path={"/devices"} element={<SiteDetails />} />

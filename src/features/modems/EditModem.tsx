@@ -5,19 +5,13 @@ import { RootState } from "@/services/store";
 import { modemSchema } from "@/components/schema";
 import { ModemsProps, useUpdateModemItemMutation } from "@/services/modemApi";
 import { initModemItem } from "@/services/slices/modems";
+import { style } from "../config/style";
 
 function EditModem() {
   const dispatch = useAppDispatch();
   const modemItem = useSelector((state: RootState) => state.modems.modemItem);
   const [editModem] = useUpdateModemItemMutation();
-  // const handleChange = (
-  //   e:
-  //     | React.ChangeEvent<HTMLInputElement>
-  //     | React.ChangeEvent<HTMLTextAreaElement>
-  // ) => {
-  //   const { name, value } = e.target;
-  //   dispatch(editInput({ [name]: value }));
-  // };
+
   const editModemSubmit = (
     values: ModemsProps,
     actions: FormikHelpers<ModemsProps>
@@ -28,17 +22,6 @@ function EditModem() {
     });
   };
 
-  const style = {
-    inputClass: `border border-[#EEF3F8] rounded px-4 py-1 mt-1 placeholder:text-sm placeholder:text-[#808080]`,
-    labelClass: `text-sm text-black flex flex-col mb-4 last:mb-0`,
-    btn: `bg-[#87C4E7] rounded-lg text-white w-full py-1 text-base font-bold mt-3`,
-    header: `text-lg font-medium my-1`,
-    field: `flex flex-col mb-2 last:mb-0`,
-    label: ``,
-    input: `px-2 py-1 rounded border border-stone-400 mt-1`,
-    error: `text-red-600 self-end text-sm pr-2`,
-    wrapper: ``,
-  };
   return (
     <div className="bg-white px-16 py-6 rounded-md">
       <Formik

@@ -23,9 +23,8 @@ const Sites = () => {
     (state: RootState) => state.sites.clickedItem
   );
 
-  const { data: sitesArr, isFetching } = useGetSitesQuery();
+  const { data: sitesArr } = useGetSitesQuery();
   const [deleteSite] = useDeleteSiteItemMutation();
-  // const [fetchModems, { data: modemsArr }] = useLazyGetModemsQuery();
 
   useEffect(() => {
     if (sitesArr) dispatch(setSites(sitesArr));
@@ -41,10 +40,6 @@ const Sites = () => {
         break;
       }
       case 2: {
-        // fetchModems().then(() => {
-        //   if (modemsArr) dispatch(setModemArr(modemsArr));
-        //   console.log(modemsArr);
-        // });
         dispatch(setClicked(false));
         dispatch(setClickedItem(null));
         navigate("/details");

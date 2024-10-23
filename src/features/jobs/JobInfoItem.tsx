@@ -40,11 +40,13 @@ export const JobInfoItem = ({
         <span className={`${style.text} mr-3`}>
           {read ? "Read" : "Not read"}
         </span>
-        <ReactTimeAgo
-          className="text-[10px] text-[rgba(7, 7, 7, 0.8)]"
-          date={getTimeString(stopDate)}
-          locale="en-US"
-        />
+        {stopDate && (
+          <ReactTimeAgo
+            className="text-[10px] text-[rgba(7, 7, 7, 0.8)]"
+            date={getTimeString(stopDate)}
+            locale="en-US"
+          />
+        )}
       </div>
     </div>
   ) : (
@@ -58,11 +60,13 @@ export const JobInfoItem = ({
 
       <div className="flex justify-between">
         <p className={`${style.text}`}>Device {deviceName}</p>
-        <ReactTimeAgo
-          className="text-[10px] text-[rgba(7, 7, 7, 0.8)]"
-          date={getTimeString(stopDate)}
-          locale="en-US"
-        />
+        {stopDate && (
+          <ReactTimeAgo
+            className="text-[10px] text-[rgba(7, 7, 7, 0.8)]"
+            date={getTimeString(stopDate)}
+            locale="en-US"
+          />
+        )}
       </div>
     </div>
   );

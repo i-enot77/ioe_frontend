@@ -36,23 +36,11 @@ const ModemItem = ({ modName, modem, onModemClick }: ModemItemProp) => {
     dispatch(changeTab("device"));
   };
 
-  const style = {
-    item: `overflow-hidden transition-all duration-500 ease-in-out`,
-    child: `flex flex-col text-sm ml-10 max-w-fit overflow-y-auto no-scrollbar`,
-    modem: `mb-1.5 last:mb-0 border  rounded-md w-full`,
-  };
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value={modem.id}>
         <AccordionTrigger className="w-full">
-          <div
-            onClick={handleClick}
-            // className={`${style.modem} ${style.item} ${
-            //   state.value ? "border-[#87C4E7]" : "border-[#D9D9D9]"
-            // }`}
-          >
-            Modem {modName}
-          </div>
+          <div onClick={handleClick}>Modem {modName}</div>
         </AccordionTrigger>
         <AccordionContent>
           {devicesArr &&

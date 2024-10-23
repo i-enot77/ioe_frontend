@@ -1,6 +1,4 @@
 import useCheckKey from "../../hooks/useCheckKey";
-import { useSelector } from "react-redux";
-import { RootState } from "@/services/store";
 import { useAppDispatch } from "@/services/hooks";
 import { setJobData } from "@/services/slices/jobs";
 import JobItem from "./JobItem";
@@ -21,7 +19,6 @@ const headerContent = [
 ];
 
 export default function Jobs() {
-  // const jobsArr = useSelector((state: RootState) => state.jobs.jobsArr);
   const dispatch = useAppDispatch();
   const { data: jobsArr } = useGetJobsArrQuery();
 

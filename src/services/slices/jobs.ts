@@ -7,7 +7,6 @@ export type JobPropWithoutID = Omit<JobProp, "id">;
 export interface JobInitStateProp {
   jobsArr: JobProp[];
   searchedJobsArr: JobProp[];
-  // periodicJobData: JobProp;
   jobData: JobProp | null;
 }
 

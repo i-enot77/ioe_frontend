@@ -1,6 +1,5 @@
 import DeviceModal from "../devices/DeviceModal";
 import EditModem from "../modems/EditModem";
-// import { devPanelToFalse, devPanelToTrue } from "../../app/slices/sidePanel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useSelector } from "react-redux";
 import { RootState } from "@/services/store";

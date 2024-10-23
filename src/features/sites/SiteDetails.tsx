@@ -17,8 +17,7 @@ export const SiteDetails = () => {
 
   const navigate = useNavigate();
 
-  const [fetchModems, { data: modemsArr, isFetching, isSuccess }] =
-    useLazyGetModemsQuery();
+  const [fetchModems, { data: modemsArr }] = useLazyGetModemsQuery();
 
   useEffect(() => {
     fetchModems();

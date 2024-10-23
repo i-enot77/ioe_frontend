@@ -2,22 +2,22 @@ import { faCircleUser, faGear } from "@fortawesome/free-solid-svg-icons";
 
 export const dropDevices = [
   {
-    src: "/test",
+    src: "/",
     content: "Current active",
   },
   {
-    src: "/test",
+    src: "/",
     content: "Dead devices",
   },
   {
-    src: "/test",
+    src: "/",
     content: "All devices",
   },
 ];
 
 export const dropAccount = [
-  { src: "/test", content: "John Doe", icon: faCircleUser },
-  { src: "/test", content: "Settings", icon: faGear },
+  { src: "/", content: "John Doe", icon: faCircleUser },
+  { src: "/", content: "Settings", icon: faGear },
 ];
 
 export const navItems = [
@@ -32,9 +32,5 @@ export const navItems = [
   {
     src: "/jobs",
     content: "Jobs",
-  },
-  {
-    src: "/test",
-    content: "Users",
   },
 ];

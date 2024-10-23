@@ -11,7 +11,6 @@ export type ModemsProps = {
   } | null;
   location: string;
   type: string;
-  // [key: string]: unknown;
 };
 
 export const modemApi = ioeApi.injectEndpoints({

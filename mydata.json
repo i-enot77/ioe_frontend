@@ -5,9 +5,7 @@
       "modem": "Modem_A",
       "devName": "name1",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 2,
@@ -18,9 +16,7 @@
       "modem": "Modem_A",
       "devName": "name22",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "id": "2",
@@ -32,9 +28,7 @@
       "modem": "Modem_A",
       "devName": "name23",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 1
@@ -44,9 +38,7 @@
       "modem": "Modem_A",
       "devName": "name2444444",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "id": "4",
@@ -58,9 +50,7 @@
       "modem": "Modem_A",
       "devName": "name2525",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 1
@@ -71,9 +61,7 @@
       "modem": "Modem_A",
       "devName": "name26",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 2
@@ -84,9 +72,7 @@
       "modem": "Modem_A",
       "devName": "name27",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 3
@@ -96,9 +82,7 @@
       "modem": "Modem_A",
       "devName": "name211111",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "id": "8",
@@ -109,9 +93,7 @@
       "modem": "Modem_A",
       "devName": "name22",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "id": "9",
@@ -123,9 +105,7 @@
       "modem": "Modem_A",
       "devName": "name23",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 5
@@ -136,9 +116,7 @@
       "modem": "Modem_A",
       "devName": "name2525",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 3
@@ -149,9 +127,7 @@
       "modem": "Modem_A",
       "devName": "name26",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 1
@@ -162,12 +138,28 @@
       "modem": "Modem_A",
       "devName": "name27",
       "type": "44Alpha",
-      "loginInfo": {
-        "loginInfo": "I am Json "
-      },
+      "loginInfo": "info",
       "timezone": "UTC 2 Warsaw time",
       "site": "Site_A",
       "modemId": 4
+    },
+    {
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "devName": "name",
+      "type": "44Alpha",
+      "loginInfo": null,
+      "site": "Site_A",
+      "id": "otxJYkx"
+    },
+    {
+      "serialNumber": "MKTG122449",
+      "modem": "Modem_A",
+      "devName": "name",
+      "type": "44Alpha",
+      "loginInfo": "nuyvtc",
+      "site": "Site_A",
+      "id": "oADnuio"
     }
   ],
   "modems": [
@@ -667,6 +659,19 @@
       "status": "",
       "type": "",
       "id": "28"
+    },
+    {
+      "deviceName": "name1111",
+      "period": "7",
+      "read": "9",
+      "readParams": {
+        "params": "jhuygtf"
+      },
+      "status": "fvgdtbfhy",
+      "type": "44Alpha",
+      "startDate": "2024-10-23T13:10:23.259Z",
+      "stopDate": "2024-10-24T13:10:00.000Z",
+      "id": "zqiFxOO"
     }
   ],
   "alarms": [

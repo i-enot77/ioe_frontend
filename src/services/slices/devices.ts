@@ -1,6 +1,5 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
 import { DevProps } from "../deviceApi";
 
 export type DevPropsWithoutId = Omit<DevProps, "id">;
@@ -14,14 +13,6 @@ const initialState: DevInitStateProps = {
   devices: [],
   deviceData: null,
 };
-
-// export const fetchDevices = createAsyncThunk(
-//   "device/fetchDevices",
-//   async () => {
-//     const res = await axios.get("http://localhost:3500/devices");
-//     return res.data;
-//   }
-// );
 
 export const deviceSlice = createSlice({
   name: "device",

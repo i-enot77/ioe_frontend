@@ -3,10 +3,10 @@ import { ioeApi } from "./api";
 export type JobProp = {
   id: string;
   deviceName: string;
-  period: number;
+  period: number | null;
   startDate: Date | null; //returned as Date from backend side
   stopDate: Date | null;
-  read: number;
+  read: number | null;
   readParams?: {
     params: string;
   } | null;

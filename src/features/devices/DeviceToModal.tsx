@@ -41,15 +41,6 @@ const DeviceToModal = () => {
     });
   }, []);
 
-  // const [isOpen, setIsOpen] = useState(false);
-  // const [selectedItems, setSelectedItems] = useState<number[]>([]);
-
-  // const checkHandler = (value: number) => {
-  //   selectedItems.includes(value)
-  //     ? setSelectedItems(selectedItems.filter((item) => item !== value))
-  //     : setSelectedItems([...selectedItems, value]);
-  // };
-
   const assignDevice = () => {
     dispatch(initOption());
     dispatch(initDevData());
@@ -66,14 +57,6 @@ const DeviceToModal = () => {
         <div className="py-2 mt-4">Add device to modem:</div>
 
         <div className="h-full">
-          {/* <div
-            className="px-2 py-3 border border-[#E4E6EB] flex justify-between items-center mt-5 rounded"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <span className="text-xs ">choose modem list</span>
-            <FontAwesomeIcon className="" icon={faSortDown} />
-          </div> */}
-
           <Select onValueChange={handleModemChange}>
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Choose modem" />
@@ -87,28 +70,6 @@ const DeviceToModal = () => {
               ))}
             </SelectContent>
           </Select>
-
-          {/* <Dropdown
-            drop={true}
-            dropClassName={`${isOpen ? "max-h-32" : "max-h-0"} ${style.form}`}
-          >
-            <ul className="my-1">
-              {modemsArr.map((item, index) => (
-                <li
-                  tabIndex={1}
-                  key={index}
-                  onClick={() => checkHandler(item.id ?? 0)}
-                  className={`${
-                    selectedItems.includes(item.id ?? 0)
-                      ? "bg-[#A9D8F4]"
-                      : "bg-white"
-                  } ${style.liItem}`}
-                >
-                  {item.name}
-                </li>
-              ))}
-            </ul>
-          </Dropdown> */}
 
           <Button className={style.btn} onClick={assignDevice}>
             Save

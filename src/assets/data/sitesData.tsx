@@ -1,14 +1,14 @@
 export const sitesItems = [
   {
-    src: "/test",
+    src: "/",
     name: "Name",
   },
   {
-    src: "/test",
+    src: "/",
     name: "Name",
   },
   {
-    src: "/test",
+    src: "/",
     name: "Name",
   },
 ];
