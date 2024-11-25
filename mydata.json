@@ -884,6 +884,45 @@
         }
       ],
       "id": "PMclpEU"
+    },
+    {
+      "identifier": "",
+      "devices": [
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name1",
+          "type": "44Alpha",
+          "loginInfo": "info",
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 2,
+          "id": "1"
+        },
+        {
+          "id": "5",
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name2525",
+          "type": "44Alpha",
+          "loginInfo": "info",
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "modemId": 1
+        },
+        {
+          "serialNumber": "MKTG122449",
+          "modem": "Modem_A",
+          "devName": "name211111",
+          "type": "44Alpha",
+          "loginInfo": "info",
+          "timezone": "UTC 2 Warsaw time",
+          "site": "Site_A",
+          "id": "8",
+          "modemId": 1
+        }
+      ],
+      "id": "07ntBDE"
     }
   ]
 }

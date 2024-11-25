@@ -5,18 +5,27 @@ import Navbar from "./components/Navbar";
 import { SiteDetails } from "./features/sites/SiteDetails";
 import JobsPage from "./pages/JobsPage";
 import Views from "./pages/Views";
+import SignIn from "./features/auth/SignIn";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { useAuth } from "react-oidc-context";
 
 function App() {
+  const auth = useAuth();
+  console.log(auth.isAuthenticated);
+
   return (
-    <div className="w-full h-screen flex flex-col justify-end overflow-y-auto  bg-[#F3F2EF]">
+    <div className="w-full h-screen flex flex-col justify-end overflow-hidden  bg-[#F3F2EF]">
       <BrowserRouter>
-        <Navbar />
+        {auth.user && <Navbar />}
         <Routes>
-          <Route path={"/"} element={<Home />} />
-          <Route path={"/details"} element={<SiteDetails />} />
-          <Route path={"/jobs"} element={<JobsPage />} />
-          <Route path={"/devices"} element={<SiteDetails />} />
-          <Route path={"/view"} element={<Views />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route element={<ProtectedRoute />}>
+            <Route path={"/"} element={<Home />} />
+            <Route path={"/details"} element={<SiteDetails />} />
+            <Route path={"/jobs"} element={<JobsPage />} />
+            <Route path={"/devices"} element={<SiteDetails />} />
+            <Route path={"/view"} element={<Views />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

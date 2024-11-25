@@ -15,6 +15,7 @@ import {
 import { navItems } from "../assets/data/navData";
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
+import SignOut from "@/features/auth/SignOut";
 
 function Navbar() {
   const style = {
@@ -89,17 +90,18 @@ function Navbar() {
         >
           <MenuItems anchor="bottom" className={style.userMenu}>
             <MenuItem>
-              <Link to={"/test"} className="mb-1">
+              <SignOut />
+              {/* <Link to={"/test"} className="mb-1">
                 <span>John Doe </span>
                 <FontAwesomeIcon icon={faCircleUser} />
-              </Link>
+              </Link> */}
             </MenuItem>
-            <MenuItem>
+            {/* <MenuItem>
               <Link to={"/test"}>
                 <span>Settings </span>
                 <FontAwesomeIcon icon={faGear} />
               </Link>
-            </MenuItem>
+            </MenuItem> */}
           </MenuItems>
         </Transition>
       </Menu>
